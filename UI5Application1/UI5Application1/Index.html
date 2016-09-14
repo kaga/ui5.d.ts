@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+﻿<!DOCTYPE HTML>
 <html>
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,17 +9,11 @@
 				data-sap-ui-theme="sap_bluecrystal">
 		</script>
       	    <link href="css/ui5application1.css" rel="stylesheet" type="text/css"/>
-   		<script>
-				sap.ui.localResources("ui5application1");
-				sap.ui.localResources("util");
-				sap.ui.localResources("i18n");
-				var app = new sap.m.App({initialPage:"app"});
-				var page = sap.ui.view({id:"app", viewName:"ui5application1.Main", type:sap.ui.core.mvc.ViewType.JSON});
-				app.addPage(page);
-				app.placeAt("content");
+   		<script src="test.js">
 		</script>
 	</head>
 	<body class="sapUiBody" role="application">
 		<div id="content"></div>
+        <script src="test.js"></script>
 	</body>
 </html>

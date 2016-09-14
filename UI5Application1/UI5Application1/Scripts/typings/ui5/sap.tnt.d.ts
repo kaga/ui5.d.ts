@@ -1,5 +1,8 @@
-
+/**
+ * SAPUI5 library with controls specialized for administrative applications.
+ */
 declare namespace sap.tnt {
+
 	class NavigationList extends sap.ui.core.Control{
 		/**
 		 * Constructor for a new NavigationList.
@@ -11,25 +14,25 @@ declare namespace sap.tnt {
 		 * @param sId ID for the new control, generated automatically if no ID is given
 		 * @param mSettings Initial settings for the new control
 		 */
-		 constructor(sId?:string, mSettings?:any);
+		constructor(sId?:string, mSettings?:any);
 		/**
 		 * Adds some ariaDescribedBy into the association <code>ariaDescribedBy</code>.
 		 * @param vAriaDescribedBy the ariaDescribedBy to add; if empty, nothing is inserted
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		 addAriaDescribedBy(vAriaDescribedBy:sap.ui.core.ID|sap.ui.core.Control): sap.tnt.NavigationList;
+		addAriaDescribedBy(vAriaDescribedBy:sap.ui.core.ID|sap.ui.core.Control): NavigationList;
 		/**
 		 * Adds some ariaLabelledBy into the association <code>ariaLabelledBy</code>.
 		 * @param vAriaLabelledBy the ariaLabelledBy to add; if empty, nothing is inserted
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		 addAriaLabelledBy(vAriaLabelledBy:sap.ui.core.ID|sap.ui.core.Control): sap.tnt.NavigationList;
+		addAriaLabelledBy(vAriaLabelledBy:sap.ui.core.ID|sap.ui.core.Control): NavigationList;
 		/**
 		 * Adds some item to the aggregation <code>items</code>.
 		 * @param oItem the item to add; if empty, nothing is inserted
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		 addItem(oItem:sap.tnt.NavigationListItem): sap.tnt.NavigationList;
+		addItem(oItem:NavigationListItem): NavigationList;
 		/**
 		 * Attaches event handler <code>fnFunction</code> to the <code>itemSelect</code> event of this <code>sap.tnt.NavigationList</code>.
 		 * 
@@ -42,12 +45,12 @@ declare namespace sap.tnt {
 		 * @param oListener Context object to call the event handler with. Defaults to this <code>sap.tnt.NavigationList</code> itself
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		 attachItemSelect(fnFunction:any, oData?:any, oListener?:any): sap.tnt.NavigationList;
+		attachItemSelect(fnFunction:any, oData?:any, oListener?:any): NavigationList;
 		/**
 		 * Destroys all the items in the aggregation <code>items</code>.
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		 destroyItems(): sap.tnt.NavigationList;
+		destroyItems(): NavigationList;
 		/**
 		 * Detaches event handler <code>fnFunction</code> from the <code>itemSelect</code> event of this <code>sap.tnt.NavigationList</code>.
 		 * 
@@ -56,7 +59,7 @@ declare namespace sap.tnt {
 		 * @param oListener Context object on which the given function had to be called
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		 detachItemSelect(fnFunction:any, oListener:any): sap.tnt.NavigationList;
+		detachItemSelect(fnFunction:any, oListener:any): NavigationList;
 		/**
 		 * Creates a new subclass of class sap.tnt.NavigationList with name <code>sClassName</code>
 		 * and enriches it with the information contained in <code>oClassInfo</code>.
@@ -67,7 +70,7 @@ declare namespace sap.tnt {
 		 * @param FNMetaImpl Constructor function for the metadata object; if not given, it defaults to <code>sap.ui.core.ElementMetadata</code>
 		 * @return Created class / constructor function
 		 */
-		 extend(sClassName:string, oClassInfo?:any, FNMetaImpl?:any): any;
+		// extend(sClassName:string, oClassInfo?:any, FNMetaImpl?:any): any;
 		/**
 		 * Fires event <code>itemSelect</code> to attached listeners.
 		 * 
@@ -78,17 +81,17 @@ declare namespace sap.tnt {
 		 * @param mArguments The arguments to pass along with the event
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		protected fireItemSelect(mArguments?:any): sap.tnt.NavigationList;
+		fireItemSelect(mArguments?:any): NavigationList;
 		/**
 		 * Returns array of IDs of the elements which are the current targets of the association <code>ariaDescribedBy</code>.
 		 * @return 
 		 */
-		 getAriaDescribedBy(): sap.ui.core.ID[];
+		getAriaDescribedBy(): sap.ui.core.ID[];
 		/**
 		 * Returns array of IDs of the elements which are the current targets of the association <code>ariaLabelledBy</code>.
 		 * @return 
 		 */
-		 getAriaLabelledBy(): sap.ui.core.ID[];
+		getAriaLabelledBy(): sap.ui.core.ID[];
 		/**
 		 * Gets current value of property <code>expanded</code>.
 		 * 
@@ -97,33 +100,33 @@ declare namespace sap.tnt {
 		 * Default value is <code>true</code>.
 		 * @return Value of property <code>expanded</code>
 		 */
-		 getExpanded(): boolean;
+		getExpanded(): boolean;
 		/**
 		 * Gets content of aggregation <code>items</code>.
 		 * 
 		 * The items displayed in the list.
 		 * @return 
 		 */
-		 getItems(): sap.tnt.NavigationListItem[];
+		getItems(): NavigationListItem[];
 		/**
 		 * Returns a metadata object for class sap.tnt.NavigationList.
 		 * @return Metadata object describing this class
 		 */
-		 getMetadata(): sap.ui.base.Metadata;
+		// getmetadata(): sap.ui.base.Metadata;
 		/**
 		 * Gets current value of property <code>width</code>.
 		 * 
 		 * Specifies the width of the control.
 		 * @return Value of property <code>width</code>
 		 */
-		 getWidth(): sap.ui.core.CSSSize;
+		getWidth(): sap.ui.core.CSSSize;
 		/**
 		 * Checks for the provided <code>sap.tnt.NavigationListItem</code> in the aggregation <code>items</code>.
 		 * and returns its index if found or -1 otherwise.
 		 * @param oItem The item whose index is looked for
 		 * @return The index of the provided control in the aggregation if found, or -1 otherwise
 		 */
-		 indexOfItem(oItem:sap.tnt.NavigationListItem): number;
+		indexOfItem(oItem:NavigationListItem): number;
 		/**
 		 * Inserts a item into the aggregation <code>items</code>.
 		 * @param oItem the item to insert; if empty, nothing is inserted
@@ -133,42 +136,42 @@ declare namespace sap.tnt {
 		 *              the last position
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		 insertItem(oItem:sap.tnt.NavigationListItem, iIndex:number): sap.tnt.NavigationList;
+		insertItem(oItem:NavigationListItem, iIndex:number): NavigationList;
 		/**
 		 * Removes all the controls in the association named <code>ariaDescribedBy</code>.
 		 * @return An array of the removed elements (might be empty)
 		 */
-		 removeAllAriaDescribedBy(): sap.ui.core.ID[];
+		removeAllAriaDescribedBy(): sap.ui.core.ID[];
 		/**
 		 * Removes all the controls in the association named <code>ariaLabelledBy</code>.
 		 * @return An array of the removed elements (might be empty)
 		 */
-		 removeAllAriaLabelledBy(): sap.ui.core.ID[];
+		removeAllAriaLabelledBy(): sap.ui.core.ID[];
 		/**
 		 * Removes all the controls from the aggregation <code>items</code>.
 		 * 
 		 * Additionally, it unregisters them from the hosting UIArea.
 		 * @return An array of the removed elements (might be empty)
 		 */
-		 removeAllItems(): sap.tnt.NavigationListItem[];
+		removeAllItems(): NavigationListItem[];
 		/**
 		 * Removes an ariaDescribedBy from the association named <code>ariaDescribedBy</code>.
 		 * @param vAriaDescribedBy The ariaDescribedBy to be removed or its index or ID
 		 * @return The removed ariaDescribedBy or <code>null</code>
 		 */
-		 removeAriaDescribedBy(vAriaDescribedBy:number|sap.ui.core.ID|sap.ui.core.Control): sap.ui.core.ID;
+		removeAriaDescribedBy(vAriaDescribedBy:number|sap.ui.core.ID|sap.ui.core.Control): sap.ui.core.ID;
 		/**
 		 * Removes an ariaLabelledBy from the association named <code>ariaLabelledBy</code>.
 		 * @param vAriaLabelledBy The ariaLabelledBy to be removed or its index or ID
 		 * @return The removed ariaLabelledBy or <code>null</code>
 		 */
-		 removeAriaLabelledBy(vAriaLabelledBy:number|sap.ui.core.ID|sap.ui.core.Control): sap.ui.core.ID;
+		removeAriaLabelledBy(vAriaLabelledBy:number|sap.ui.core.ID|sap.ui.core.Control): sap.ui.core.ID;
 		/**
 		 * Removes a item from the aggregation <code>items</code>.
 		 * @param vItem The item to remove or its index or id
 		 * @return The removed item or <code>null</code>
 		 */
-		 removeItem(vItem:number|string|sap.tnt.NavigationListItem): sap.tnt.NavigationListItem;
+		removeItem(vItem:number|string|NavigationListItem): NavigationListItem;
 		/**
 		 * Sets a new value for property <code>expanded</code>.
 		 * 
@@ -180,7 +183,7 @@ declare namespace sap.tnt {
 		 * @param bExpanded New value for property <code>expanded</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		 setExpanded(bExpanded:boolean): sap.tnt.NavigationList;
+		setExpanded(bExpanded:boolean): NavigationList;
 		/**
 		 * Sets a new value for property <code>width</code>.
 		 * 
@@ -190,8 +193,9 @@ declare namespace sap.tnt {
 		 * @param sWidth New value for property <code>width</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		 setWidth(sWidth:sap.ui.core.CSSSize): sap.tnt.NavigationList;
+		setWidth(sWidth:sap.ui.core.CSSSize): NavigationList;
 	}
+
 	class NavigationListItem extends sap.ui.core.Item{
 		/**
 		 * Constructor for a new NavigationListItem.
@@ -203,13 +207,13 @@ declare namespace sap.tnt {
 		 * @param sId ID for the new control, generated automatically if no ID is given
 		 * @param mSettings Initial settings for the new control
 		 */
-		 constructor(sId?:string, mSettings?:any);
+		constructor(sId?:string, mSettings?:any);
 		/**
 		 * Adds some item to the aggregation <code>items</code>.
 		 * @param oItem the item to add; if empty, nothing is inserted
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		 addItem(oItem:sap.tnt.NavigationListItem): sap.tnt.NavigationListItem;
+		addItem(oItem:NavigationListItem): NavigationListItem;
 		/**
 		 * Attaches event handler <code>fnFunction</code> to the <code>select</code> event of this <code>sap.tnt.NavigationListItem</code>.
 		 * 
@@ -222,12 +226,12 @@ declare namespace sap.tnt {
 		 * @param oListener Context object to call the event handler with. Defaults to this <code>sap.tnt.NavigationListItem</code> itself
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		 attachSelect(fnFunction:any, oData?:any, oListener?:any): sap.tnt.NavigationListItem;
+		attachSelect(fnFunction:any, oData?:any, oListener?:any): NavigationListItem;
 		/**
 		 * Destroys all the items in the aggregation <code>items</code>.
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		 destroyItems(): sap.tnt.NavigationListItem;
+		destroyItems(): NavigationListItem;
 		/**
 		 * Detaches event handler <code>fnFunction</code> from the <code>select</code> event of this <code>sap.tnt.NavigationListItem</code>.
 		 * 
@@ -236,7 +240,7 @@ declare namespace sap.tnt {
 		 * @param oListener Context object on which the given function had to be called
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		 detachSelect(fnFunction:any, oListener:any): sap.tnt.NavigationListItem;
+		detachSelect(fnFunction:any, oListener:any): NavigationListItem;
 		/**
 		 * Creates a new subclass of class sap.tnt.NavigationListItem with name <code>sClassName</code>
 		 * and enriches it with the information contained in <code>oClassInfo</code>.
@@ -247,7 +251,7 @@ declare namespace sap.tnt {
 		 * @param FNMetaImpl Constructor function for the metadata object; if not given, it defaults to <code>sap.ui.core.ElementMetadata</code>
 		 * @return Created class / constructor function
 		 */
-		 extend(sClassName:string, oClassInfo?:any, FNMetaImpl?:any): any;
+		// extend(sClassName:string, oClassInfo?:any, FNMetaImpl?:any): any;
 		/**
 		 * Fires event <code>select</code> to attached listeners.
 		 * 
@@ -258,7 +262,7 @@ declare namespace sap.tnt {
 		 * @param mArguments The arguments to pass along with the event
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		protected fireSelect(mArguments?:any): sap.tnt.NavigationListItem;
+		fireSelect(mArguments?:any): NavigationListItem;
 		/**
 		 * Gets current value of property <code>expanded</code>.
 		 * 
@@ -267,7 +271,7 @@ declare namespace sap.tnt {
 		 * Default value is <code>true</code>.
 		 * @return Value of property <code>expanded</code>
 		 */
-		 getExpanded(): boolean;
+		getExpanded(): boolean;
 		/**
 		 * Gets current value of property <code>hasExpander</code>.
 		 * 
@@ -276,7 +280,7 @@ declare namespace sap.tnt {
 		 * Default value is <code>true</code>.
 		 * @return Value of property <code>hasExpander</code>
 		 */
-		 getHasExpander(): boolean;
+		getHasExpander(): boolean;
 		/**
 		 * Gets current value of property <code>icon</code>.
 		 * 
@@ -285,26 +289,26 @@ declare namespace sap.tnt {
 		 * Default value is <code></code>.
 		 * @return Value of property <code>icon</code>
 		 */
-		 getIcon(): sap.ui.core.URI;
+		getIcon(): sap.ui.core.URI;
 		/**
 		 * Gets content of aggregation <code>items</code>.
 		 * 
 		 * The sub items.
 		 * @return 
 		 */
-		 getItems(): sap.tnt.NavigationListItem[];
+		getItems(): NavigationListItem[];
 		/**
 		 * Returns a metadata object for class sap.tnt.NavigationListItem.
 		 * @return Metadata object describing this class
 		 */
-		 getMetadata(): sap.ui.base.Metadata;
+		// getmetadata(): sap.ui.base.Metadata;
 		/**
 		 * Checks for the provided <code>sap.tnt.NavigationListItem</code> in the aggregation <code>items</code>.
 		 * and returns its index if found or -1 otherwise.
 		 * @param oItem The item whose index is looked for
 		 * @return The index of the provided control in the aggregation if found, or -1 otherwise
 		 */
-		 indexOfItem(oItem:sap.tnt.NavigationListItem): number;
+		indexOfItem(oItem:NavigationListItem): number;
 		/**
 		 * Inserts a item into the aggregation <code>items</code>.
 		 * @param oItem the item to insert; if empty, nothing is inserted
@@ -314,20 +318,20 @@ declare namespace sap.tnt {
 		 *              the last position
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		 insertItem(oItem:sap.tnt.NavigationListItem, iIndex:number): sap.tnt.NavigationListItem;
+		insertItem(oItem:NavigationListItem, iIndex:number): NavigationListItem;
 		/**
 		 * Removes all the controls from the aggregation <code>items</code>.
 		 * 
 		 * Additionally, it unregisters them from the hosting UIArea.
 		 * @return An array of the removed elements (might be empty)
 		 */
-		 removeAllItems(): sap.tnt.NavigationListItem[];
+		removeAllItems(): NavigationListItem[];
 		/**
 		 * Removes a item from the aggregation <code>items</code>.
 		 * @param vItem The item to remove or its index or id
 		 * @return The removed item or <code>null</code>
 		 */
-		 removeItem(vItem:number|string|sap.tnt.NavigationListItem): sap.tnt.NavigationListItem;
+		removeItem(vItem:number|string|NavigationListItem): NavigationListItem;
 		/**
 		 * Sets a new value for property <code>expanded</code>.
 		 * 
@@ -339,7 +343,7 @@ declare namespace sap.tnt {
 		 * @param bExpanded New value for property <code>expanded</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		 setExpanded(bExpanded:boolean): sap.tnt.NavigationListItem;
+		setExpanded(bExpanded:boolean): NavigationListItem;
 		/**
 		 * Sets a new value for property <code>hasExpander</code>.
 		 * 
@@ -351,7 +355,7 @@ declare namespace sap.tnt {
 		 * @param bHasExpander New value for property <code>hasExpander</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		 setHasExpander(bHasExpander:boolean): sap.tnt.NavigationListItem;
+		setHasExpander(bHasExpander:boolean): NavigationListItem;
 		/**
 		 * Sets a new value for property <code>icon</code>.
 		 * 
@@ -363,8 +367,9 @@ declare namespace sap.tnt {
 		 * @param sIcon New value for property <code>icon</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		 setIcon(sIcon:sap.ui.core.URI): sap.tnt.NavigationListItem;
+		setIcon(sIcon:sap.ui.core.URI): NavigationListItem;
 	}
+
 	class SideNavigation extends sap.ui.core.Control{
 		/**
 		 * Constructor for a new SideNavigation.
@@ -376,7 +381,7 @@ declare namespace sap.tnt {
 		 * @param sId ID for the new control, generated automatically if no ID is given
 		 * @param mSettings Initial settings for the new control
 		 */
-		 constructor(sId?:string, mSettings?:any);
+		constructor(sId?:string, mSettings?:any);
 		/**
 		 * Attaches event handler <code>fnFunction</code> to the <code>itemSelect</code> event of this <code>sap.tnt.SideNavigation</code>.
 		 * 
@@ -389,7 +394,7 @@ declare namespace sap.tnt {
 		 * @param oListener Context object to call the event handler with. Defaults to this <code>sap.tnt.SideNavigation</code> itself
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		 attachItemSelect(fnFunction:any, oData?:any, oListener?:any): sap.tnt.SideNavigation;
+		attachItemSelect(fnFunction:any, oData?:any, oListener?:any): SideNavigation;
 		/**
 		 * Binds aggregation <code>item</code> to model data.
 		 * 
@@ -398,22 +403,22 @@ declare namespace sap.tnt {
 		 * @param oBindingInfo The binding information
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		 bindItem(oBindingInfo:any): sap.tnt.SideNavigation;
+		bindItem(oBindingInfo:any): SideNavigation;
 		/**
 		 * Destroys the fixedItem in the aggregation <code>fixedItem</code>.
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		 destroyFixedItem(): sap.tnt.SideNavigation;
+		destroyFixedItem(): SideNavigation;
 		/**
 		 * Destroys the footer in the aggregation <code>footer</code>.
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		 destroyFooter(): sap.tnt.SideNavigation;
+		destroyFooter(): SideNavigation;
 		/**
 		 * Destroys the item in the aggregation <code>item</code>.
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		 destroyItem(): sap.tnt.SideNavigation;
+		destroyItem(): SideNavigation;
 		/**
 		 * Detaches event handler <code>fnFunction</code> from the <code>itemSelect</code> event of this <code>sap.tnt.SideNavigation</code>.
 		 * 
@@ -422,7 +427,7 @@ declare namespace sap.tnt {
 		 * @param oListener Context object on which the given function had to be called
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		 detachItemSelect(fnFunction:any, oListener:any): sap.tnt.SideNavigation;
+		detachItemSelect(fnFunction:any, oListener:any): SideNavigation;
 		/**
 		 * Creates a new subclass of class sap.tnt.SideNavigation with name <code>sClassName</code>
 		 * and enriches it with the information contained in <code>oClassInfo</code>.
@@ -433,7 +438,7 @@ declare namespace sap.tnt {
 		 * @param FNMetaImpl Constructor function for the metadata object; if not given, it defaults to <code>sap.ui.core.ElementMetadata</code>
 		 * @return Created class / constructor function
 		 */
-		 extend(sClassName:string, oClassInfo?:any, FNMetaImpl?:any): any;
+		// extend(sClassName:string, oClassInfo?:any, FNMetaImpl?:any): any;
 		/**
 		 * Fires event <code>itemSelect</code> to attached listeners.
 		 * 
@@ -444,7 +449,7 @@ declare namespace sap.tnt {
 		 * @param mArguments The arguments to pass along with the event
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		protected fireItemSelect(mArguments?:any): sap.tnt.SideNavigation;
+		fireItemSelect(mArguments?:any): SideNavigation;
 		/**
 		 * Gets current value of property <code>expanded</code>.
 		 * 
@@ -453,64 +458,65 @@ declare namespace sap.tnt {
 		 * Default value is <code>true</code>.
 		 * @return Value of property <code>expanded</code>
 		 */
-		 getExpanded(): boolean;
+		getExpanded(): boolean;
 		/**
 		 * Gets content of aggregation <code>fixedItem</code>.
 		 * 
 		 * Defines the content inside the fixed part.
 		 * @return 
 		 */
-		 getFixedItem(): sap.tnt.NavigationList;
+		getFixedItem(): NavigationList;
 		/**
 		 * Gets content of aggregation <code>footer</code>.
 		 * 
 		 * Defines the content inside the footer.
 		 * @return 
 		 */
-		 getFooter(): sap.tnt.NavigationList;
+		getFooter(): NavigationList;
 		/**
 		 * Gets content of aggregation <code>item</code>.
 		 * 
 		 * Defines the content inside the flexible part.
 		 * @return 
 		 */
-		 getItem(): sap.tnt.NavigationList;
+		getItem(): NavigationList;
 		/**
 		 * Returns a metadata object for class sap.tnt.SideNavigation.
 		 * @return Metadata object describing this class
 		 */
-		 getMetadata(): sap.ui.base.Metadata;
+		// getmetadata(): sap.ui.base.Metadata;
 		/**
 		 * Sets the aggregated <code>fixedItem</code>.
 		 * @param oFixedItem The fixedItem to set
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		 setFixedItem(oFixedItem:sap.tnt.NavigationList): sap.tnt.SideNavigation;
+		setFixedItem(oFixedItem:NavigationList): SideNavigation;
 		/**
 		 * Sets the aggregated <code>footer</code>.
 		 * @param oFooter The footer to set
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		 setFooter(oFooter:sap.tnt.NavigationList): sap.tnt.SideNavigation;
+		setFooter(oFooter:NavigationList): SideNavigation;
 		/**
 		 * Sets the aggregated <code>item</code>.
 		 * @param oItem The item to set
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		 setItem(oItem:sap.tnt.NavigationList): sap.tnt.SideNavigation;
+		setItem(oItem:NavigationList): SideNavigation;
 		/**
 		 * Unbinds aggregation <code>item</code> from model data.
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		 unbindItem(): sap.tnt.SideNavigation;
+		unbindItem(): SideNavigation;
 	}
+
 	class ToolHeader extends sap.m.OverflowToolbar{
 		/**
 		 * Constructor for a new ToolHeader.
 		 * @param sId ID for the new control, generated automatically if no ID is given
 		 * @param mSettings Initial settings for the new control
 		 */
-		 constructor(sId?:string, mSettings?:any);
+		constructor(sId?:string, mSettings?:any);
 		/**
 		 * Creates a new subclass of class sap.tnt.ToolHeader with name <code>sClassName</code>
 		 * and enriches it with the information contained in <code>oClassInfo</code>.
@@ -521,20 +527,21 @@ declare namespace sap.tnt {
 		 * @param FNMetaImpl Constructor function for the metadata object; if not given, it defaults to <code>sap.ui.core.ElementMetadata</code>
 		 * @return Created class / constructor function
 		 */
-		 extend(sClassName:string, oClassInfo?:any, FNMetaImpl?:any): any;
+		// extend(sClassName:string, oClassInfo?:any, FNMetaImpl?:any): any;
 		/**
 		 * Returns a metadata object for class sap.tnt.ToolHeader.
 		 * @return Metadata object describing this class
 		 */
-		 getMetadata(): sap.ui.base.Metadata;
+		// getmetadata(): sap.ui.base.Metadata;
 	}
+
 	class ToolHeaderUtilitySeparator extends sap.ui.core.Control{
 		/**
 		 * Constructor for a new ToolHeaderUtilitySeparator.
 		 * @param sId ID for the new control, generated automatically if no ID is given
 		 * @param mSettings Initial settings for the new control
 		 */
-		 constructor(sId?:string, mSettings?:any);
+		constructor(sId?:string, mSettings?:any);
 		/**
 		 * Creates a new subclass of class sap.tnt.ToolHeaderUtilitySeparator with name <code>sClassName</code>
 		 * and enriches it with the information contained in <code>oClassInfo</code>.
@@ -545,13 +552,14 @@ declare namespace sap.tnt {
 		 * @param FNMetaImpl Constructor function for the metadata object; if not given, it defaults to <code>sap.ui.core.ElementMetadata</code>
 		 * @return Created class / constructor function
 		 */
-		 extend(sClassName:string, oClassInfo?:any, FNMetaImpl?:any): any;
+		// extend(sClassName:string, oClassInfo?:any, FNMetaImpl?:any): any;
 		/**
 		 * Returns a metadata object for class sap.tnt.ToolHeaderUtilitySeparator.
 		 * @return Metadata object describing this class
 		 */
-		 getMetadata(): sap.ui.base.Metadata;
+		// getmetadata(): sap.ui.base.Metadata;
 	}
+
 	class ToolPage extends sap.ui.core.Control{
 		/**
 		 * Constructor for a new ToolPage.
@@ -563,28 +571,28 @@ declare namespace sap.tnt {
 		 * @param sId ID for the new control, generated automatically if no id is given
 		 * @param mSettings Initial settings for the new control
 		 */
-		 constructor(sId?:string, mSettings?:any);
+		constructor(sId?:string, mSettings?:any);
 		/**
 		 * Adds some mainContent to the aggregation <code>mainContents</code>.
 		 * @param oMainContent the mainContent to add; if empty, nothing is inserted
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		 addMainContent(oMainContent:sap.ui.core.Control): sap.tnt.ToolPage;
+		addMainContent(oMainContent:sap.ui.core.Control): ToolPage;
 		/**
 		 * Destroys the header in the aggregation <code>header</code>.
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		 destroyHeader(): sap.tnt.ToolPage;
+		destroyHeader(): ToolPage;
 		/**
 		 * Destroys all the mainContents in the aggregation <code>mainContents</code>.
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		 destroyMainContents(): sap.tnt.ToolPage;
+		destroyMainContents(): ToolPage;
 		/**
 		 * Destroys the sideContent in the aggregation <code>sideContent</code>.
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		 destroySideContent(): sap.tnt.ToolPage;
+		destroySideContent(): ToolPage;
 		/**
 		 * Creates a new subclass of class sap.tnt.ToolPage with name <code>sClassName</code>
 		 * and enriches it with the information contained in <code>oClassInfo</code>.
@@ -595,33 +603,33 @@ declare namespace sap.tnt {
 		 * @param FNMetaImpl Constructor function for the metadata object; if not given, it defaults to <code>sap.ui.core.ElementMetadata</code>
 		 * @return Created class / constructor function
 		 */
-		 extend(sClassName:string, oClassInfo?:any, FNMetaImpl?:any): any;
+		// extend(sClassName:string, oClassInfo?:any, FNMetaImpl?:any): any;
 		/**
 		 * Gets content of aggregation <code>header</code>.
 		 * 
 		 * The control to appear in the header area.
 		 * @return 
 		 */
-		 getHeader(): sap.tnt.ToolHeader;
+		getHeader(): ToolHeader;
 		/**
 		 * Gets content of aggregation <code>mainContents</code>.
 		 * 
 		 * The content section.
 		 * @return 
 		 */
-		 getMainContents(): sap.ui.core.Control[];
+		getMainContents(): sap.ui.core.Control[];
 		/**
 		 * Returns a metadata object for class sap.tnt.ToolPage.
 		 * @return Metadata object describing this class
 		 */
-		 getMetadata(): sap.ui.base.Metadata;
+		// getmetadata(): sap.ui.base.Metadata;
 		/**
 		 * Gets content of aggregation <code>sideContent</code>.
 		 * 
 		 * The side menu of the layout.
 		 * @return 
 		 */
-		 getSideContent(): sap.tnt.SideNavigation;
+		getSideContent(): SideNavigation;
 		/**
 		 * Gets current value of property <code>sideExpanded</code>.
 		 * 
@@ -630,14 +638,14 @@ declare namespace sap.tnt {
 		 * Default value is <code>true</code>.
 		 * @return Value of property <code>sideExpanded</code>
 		 */
-		 getSideExpanded(): boolean;
+		getSideExpanded(): boolean;
 		/**
 		 * Checks for the provided <code>sap.ui.core.Control</code> in the aggregation <code>mainContents</code>.
 		 * and returns its index if found or -1 otherwise.
 		 * @param oMainContent The mainContent whose index is looked for
 		 * @return The index of the provided control in the aggregation if found, or -1 otherwise
 		 */
-		 indexOfMainContent(oMainContent:sap.ui.core.Control): number;
+		indexOfMainContent(oMainContent:sap.ui.core.Control): number;
 		/**
 		 * Inserts a mainContent into the aggregation <code>mainContents</code>.
 		 * @param oMainContent the mainContent to insert; if empty, nothing is inserted
@@ -647,42 +655,42 @@ declare namespace sap.tnt {
 		 *              the last position
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		 insertMainContent(oMainContent:sap.ui.core.Control, iIndex:number): sap.tnt.ToolPage;
+		insertMainContent(oMainContent:sap.ui.core.Control, iIndex:number): ToolPage;
 		/**
 		 * Removes all the controls from the aggregation <code>mainContents</code>.
 		 * 
 		 * Additionally, it unregisters them from the hosting UIArea.
 		 * @return An array of the removed elements (might be empty)
 		 */
-		 removeAllMainContents(): sap.ui.core.Control[];
+		removeAllMainContents(): sap.ui.core.Control[];
 		/**
 		 * Removes a mainContent from the aggregation <code>mainContents</code>.
 		 * @param vMainContent The mainContent to remove or its index or id
 		 * @return The removed mainContent or <code>null</code>
 		 */
-		 removeMainContent(vMainContent:number|string|sap.ui.core.Control): sap.ui.core.Control;
+		removeMainContent(vMainContent:number|string|sap.ui.core.Control): sap.ui.core.Control;
 		/**
 		 * Sets the aggregated <code>header</code>.
 		 * @param oHeader The header to set
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		 setHeader(oHeader:sap.tnt.ToolHeader): sap.tnt.ToolPage;
+		setHeader(oHeader:ToolHeader): ToolPage;
 		/**
 		 * Sets the aggregated <code>sideContent</code>.
 		 * @param oSideContent The sideContent to set
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		 setSideContent(oSideContent:sap.tnt.SideNavigation): sap.tnt.ToolPage;
+		setSideContent(oSideContent:SideNavigation): ToolPage;
 		/**
 		 * Sets the expand/collapse state of the SideContent.
 		 * @param isSideExpanded defines whether the SideNavigation is expanded.
 		 * @return Pointer to the control instance for chaining
 		 */
-		 setSideExpanded(isSideExpanded:boolean): sap.tnt.ToolPage;
+		setSideExpanded(isSideExpanded:boolean): ToolPage;
 		/**
 		 * Toggles the expand/collapse state of the SideContent.
 		 * @return Pointer to the control instance for chaining.
 		 */
-		 toggleSideContentMode(): sap.tnt.ToolPage;
+		toggleSideContentMode(): ToolPage;
 	}
 }
