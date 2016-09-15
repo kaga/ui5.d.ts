@@ -1,5 +1,4 @@
-import sapui = sap.ui
-
+import sapui = sap.ui;
 /**
  * Provides base functionality of the SAP jQuery plugin as extension of the jQuery framework.<br/>
  * See also <a href="http://api.jquery.com/jQuery/">jQuery</a> for details.<br/>
@@ -85,13 +84,13 @@ declare namespace jQuery {
 				static WARNING: any;
 			}
 		
-			class Logger {
+			class Logger  {
 				/**
 				 * Creates a new Logger instance which will use the given component string
 				 * for all logged messages without a specific component.
 				 * @param sDefaultComponent The component to use
 				 */
-				constructor(sDefaultComponent:string);
+				constructor(sDefaultComponent: string);
 				/**
 				 * Creates a new debug-level entry in the log with the given message, details and calling component.
 				 * @param sMessage Message text to display
@@ -99,7 +98,7 @@ declare namespace jQuery {
 				 * @param sComponent Name of the component that produced the log entry
 				 * @return The log instance
 				 */
-				debug(sMessage:string, sDetails?:string, sComponent?:string): Logger;
+				debug(sMessage: string, sDetails?: string, sComponent?: string): Logger;
 				/**
 				 * Creates a new error-level entry in the log with the given message, details and calling component.
 				 * @param sMessage Message text to display
@@ -107,7 +106,7 @@ declare namespace jQuery {
 				 * @param sComponent Name of the component that produced the log entry
 				 * @return The log instance
 				 */
-				error(sMessage:string, sDetails?:string, sComponent?:string): Logger;
+				error(sMessage: string, sDetails?: string, sComponent?: string): Logger;
 				/**
 				 * Creates a new fatal-level entry in the log with the given message, details and calling component.
 				 * @param sMessage Message text to display
@@ -115,7 +114,7 @@ declare namespace jQuery {
 				 * @param sComponent Name of the component that produced the log entry
 				 * @return The log instance for method chaining
 				 */
-				fatal(sMessage:string, sDetails?:string, sComponent?:string): Logger;
+				fatal(sMessage: string, sDetails?: string, sComponent?: string): Logger;
 				/**
 				 * Returns the log level currently effective for the given component.
 				 * If no component is given or when no level has been configured for a
@@ -123,7 +122,7 @@ declare namespace jQuery {
 				 * @param sComponent Name of the component to retrieve the log level for
 				 * @return The log level for the given component or the default log level
 				 */
-				getLevel(sComponent?:string): number;
+				getLevel(sComponent?: string): number;
 				/**
 				 * Creates a new info-level entry in the log with the given message, details and calling component.
 				 * @param sMessage Message text to display
@@ -131,7 +130,7 @@ declare namespace jQuery {
 				 * @param sComponent Name of the component that produced the log entry
 				 * @return The log instance
 				 */
-				info(sMessage:string, sDetails?:string, sComponent?:string): Logger;
+				info(sMessage: string, sDetails?: string, sComponent?: string): Logger;
 				/**
 				 * Checks whether logging is enabled for the given log level,
 				 * depending on the currently effective log level for the given component.
@@ -141,7 +140,7 @@ declare namespace jQuery {
 				 * @param sComponent Name of the component to check the log level for
 				 * @return Whether logging is enabled or not
 				 */
-				isLoggable(iLevel?:number, sComponent?:string): boolean;
+				isLoggable(iLevel?: number, sComponent?: string): boolean;
 				/**
 				 * Defines the maximum <code>jQuery.sap.log.Level</code> of log entries that will be recorded.
 				 * Log entries with a higher (less important) log level will be omitted from the log.
@@ -155,7 +154,7 @@ declare namespace jQuery {
 				 * @param sComponent The log component to set the log level for
 				 * @return This logger object to allow method chaining
 				 */
-				setLevel(iLogLevel:Level, sComponent?:string): Logger;
+				setLevel(iLogLevel: Level, sComponent?: string): Logger;
 				/**
 				 * Creates a new trace-level entry in the log with the given message, details and calling component.
 				 * @param sMessage Message text to display
@@ -163,7 +162,7 @@ declare namespace jQuery {
 				 * @param sComponent Name of the component that produced the log entry
 				 * @return The log-instance
 				 */
-				trace(sMessage:string, sDetails?:string, sComponent?:string): Logger;
+				trace(sMessage: string, sDetails?: string, sComponent?: string): Logger;
 				/**
 				 * Creates a new warning-level entry in the log with the given message, details and calling component.
 				 * @param sMessage Message text to display
@@ -171,7 +170,7 @@ declare namespace jQuery {
 				 * @param sComponent Name of the component that produced the log entry
 				 * @return The log instance
 				 */
-				warning(sMessage:string, sDetails?:string, sComponent?:string): Logger;
+				warning(sMessage: string, sDetails?: string, sComponent?: string): Logger;
 			}
 			/**
 			 * Allows to add a new LogListener that will be notified for new log entries.
@@ -180,7 +179,7 @@ declare namespace jQuery {
 			 * @param oListener The new listener object that should be informed
 			 * @return The global logger
 			 */
-			function addLogListener(oListener:any): log.Logger;
+			function addLogListener(oListener: any): log.Logger;
 			/**
 			 * Creates a new debug-level entry in the log with the given message, details and calling component.
 			 * @param sMessage Message text to display
@@ -188,7 +187,7 @@ declare namespace jQuery {
 			 * @param sComponent Name of the component that produced the log entry
 			 * @return The log instance
 			 */
-			function debug(sMessage:string, sDetails?:string, sComponent?:string): log.Logger;
+			function debug(sMessage: string, sDetails?: string, sComponent?: string): log.Logger;
 			/**
 			 * Creates a new error-level entry in the log with the given message, details and calling component.
 			 * @param sMessage Message text to display
@@ -196,7 +195,7 @@ declare namespace jQuery {
 			 * @param sComponent Name of the component that produced the log entry
 			 * @return The log instance
 			 */
-			function error(sMessage:string, sDetails?:string, sComponent?:string): log.Logger;
+			function error(sMessage: string, sDetails?: string, sComponent?: string): log.Logger;
 			/**
 			 * Creates a new fatal-level entry in the log with the given message, details and calling component.
 			 * @param sMessage Message text to display
@@ -204,7 +203,7 @@ declare namespace jQuery {
 			 * @param sComponent Name of the component that produced the log entry
 			 * @return The log instance for method chaining
 			 */
-			function fatal(sMessage:string, sDetails?:string, sComponent?:string): log.Logger;
+			function fatal(sMessage: string, sDetails?: string, sComponent?: string): log.Logger;
 			/**
 			 * Returns the log level currently effective for the given component.
 			 * If no component is given or when no level has been configured for a
@@ -212,7 +211,7 @@ declare namespace jQuery {
 			 * @param sComponent Name of the component to retrieve the log level for
 			 * @return The log level for the given component or the default log level
 			 */
-			function getLevel(sComponent?:string): number;
+			function getLevel(sComponent?: string): number;
 			/**
 			 * Returns the logged entries recorded so far as an array.
 			 * 
@@ -242,7 +241,7 @@ declare namespace jQuery {
 			 *   if no log level has been defined for it so far.
 			 * @return A logger for the component.
 			 */
-			function getLogger(sComponent:string, iDefaultLogLevel?:number): log.Logger;
+			function getLogger(sComponent: string, iDefaultLogLevel?: number): log.Logger;
 			/**
 			 * Creates a new info-level entry in the log with the given message, details and calling component.
 			 * @param sMessage Message text to display
@@ -250,7 +249,7 @@ declare namespace jQuery {
 			 * @param sComponent Name of the component that produced the log entry
 			 * @return The log instance
 			 */
-			function info(sMessage:string, sDetails?:string, sComponent?:string): log.Logger;
+			function info(sMessage: string, sDetails?: string, sComponent?: string): log.Logger;
 			/**
 			 * Checks whether logging is enabled for the given log level,
 			 * depending on the currently effective log level for the given component.
@@ -260,13 +259,13 @@ declare namespace jQuery {
 			 * @param sComponent Name of the component to check the log level for
 			 * @return Whether logging is enabled or not
 			 */
-			function isLoggable(iLevel?:number, sComponent?:string): boolean;
+			function isLoggable(iLevel?: number, sComponent?: string): boolean;
 			/**
 			 * Allows to remove a registered LogListener.
 			 * @param oListener The new listener object that should be removed
 			 * @return The global logger
 			 */
-			function removeLogListener(oListener:any): log.Logger;
+			function removeLogListener(oListener: any): log.Logger;
 			/**
 			 * Defines the maximum <code>jQuery.sap.log.Level</code> of log entries that will be recorded.
 			 * Log entries with a higher (less important) log level will be omitted from the log.
@@ -280,7 +279,7 @@ declare namespace jQuery {
 			 * @param sComponent The log component to set the log level for
 			 * @return This logger object to allow method chaining
 			 */
-			function setLevel(iLogLevel:log.Level, sComponent?:string): log.Logger;
+			function setLevel(iLogLevel: log.Level, sComponent?: string): log.Logger;
 			/**
 			 * Creates a new trace-level entry in the log with the given message, details and calling component.
 			 * @param sMessage Message text to display
@@ -288,7 +287,7 @@ declare namespace jQuery {
 			 * @param sComponent Name of the component that produced the log entry
 			 * @return The log-instance
 			 */
-			function trace(sMessage:string, sDetails?:string, sComponent?:string): log.Logger;
+			function trace(sMessage: string, sDetails?: string, sComponent?: string): log.Logger;
 			/**
 			 * Creates a new warning-level entry in the log with the given message, details and calling component.
 			 * @param sMessage Message text to display
@@ -296,7 +295,7 @@ declare namespace jQuery {
 			 * @param sComponent Name of the component that produced the log entry
 			 * @return The log instance
 			 */
-			function warning(sMessage:string, sDetails?:string, sComponent?:string): log.Logger;
+			function warning(sMessage: string, sDetails?: string, sComponent?: string): log.Logger;
 		}
 	
 		/**
@@ -315,7 +314,7 @@ declare namespace jQuery {
 			 * @param aCategories An optional list of categories for the measure
 			 * @return [] current measurement containing id, info and start-timestamp, end-timestamp, time, duration, categories (false if error)
 			 */
-			function add(sId:string, sInfo:string, iStart:number, iEnd:number, iTime:number, iDuration:number, aCategories?:string|string[]): any;
+			function add(sId: string, sInfo: string, iStart: number, iEnd: number, iTime: number, iDuration: number, aCategories?: string|string[]): any;
 			/**
 			 * Starts an average performance measure.
 			 * The duration of this measure is an avarage of durations measured for each call.
@@ -325,7 +324,7 @@ declare namespace jQuery {
 			 * @param aCategories An optional list of categories for the measure
 			 * @return current measurement containing id, info and start-timestamp (false if error)
 			 */
-			function average(sId:string, sInfo:string, aCategories?:string|string[]): any;
+			function average(sId: string, sInfo: string, aCategories?: string|string[]): any;
 			/**
 			 * Clears all performance measurements
 			 */
@@ -343,12 +342,12 @@ declare namespace jQuery {
 			 * @param sId ID of the measurement
 			 * @return current measurement containing id, info and start-timestamp, end-timestamp, time, duration (false if error)
 			 */
-			function end(sId:string): any;
+			function end(sId: string): any;
 			/**
 			 * End an interaction measurements
 			 * @param bForce forces end of interaction now and ignores further re-renderings
 			 */
-			function endInteraction(bForce:boolean);
+			function endInteraction(bForce: boolean);
 			/**
 			 * Gets all interaction measurements for which a provided filter function returns a truthy value.
 			 * To filter for certain categories of measurements a fnFilter can be implemented like this
@@ -359,7 +358,7 @@ declare namespace jQuery {
 			 * @param fnFilter a filter function that returns true if the passed measurement should be added to the result
 			 * @return all interaction measurements passing the filter function successfully
 			 */
-			function filterInteractionMeasurements(fnFilter:any): any[];
+			function filterInteractionMeasurements(fnFilter: any): any[];
 			/**
 			 * Gets all performance measurements where a provided filter function returns a truthy value.
 			 * If neither a filter function nor a category is provided an empty array is returned.
@@ -373,7 +372,7 @@ declare namespace jQuery {
 			 * @param aCategories The function returns only measurements which match these specified categories
 			 * @return [] filtered array with measurements containing id, info and start-timestamp, end-timestamp, time, duration, categories (false if error)
 			 */
-			function filterMeasurements(fnFilter?:any, bCompleted?:boolean|any, aCategories?:string[]): any;
+			function filterMeasurements(fnFilter?: any, bCompleted?: boolean|any, aCategories?: string[]): any;
 			/**
 			 * Gets the current state of the perfomance measurement functionality
 			 * @return current state of the perfomance measurement functionality
@@ -384,19 +383,19 @@ declare namespace jQuery {
 			 * @param bFinalize finalize the current pending interaction so that it is contained in the returned array
 			 * @return all interaction measurements
 			 */
-			function getAllInteractionMeasurements(bFinalize:boolean): any[];
+			function getAllInteractionMeasurements(bFinalize: boolean): any[];
 			/**
 			 * Gets all performance measurements
 			 * @param bCompleted Whether only completed measurements should be returned, if explicitly set to false only incomplete measurements are returned
 			 * @return current array with measurements containing id, info and start-timestamp, end-timestamp, time, duration, categories
 			 */
-			function getAllMeasurements(bCompleted?:boolean): any[];
+			function getAllMeasurements(bCompleted?: boolean): any[];
 			/**
 			 * Gets a performance measure
 			 * @param sId ID of the measurement
 			 * @return current measurement containing id, info and start-timestamp, end-timestamp, time, duration (false if error)
 			 */
-			function getMeasurement(sId:string): any;
+			function getMeasurement(sId: string): any;
 			/**
 			 * Gets the current request timings array for type 'resource' safely
 			 * @return array of performance timing objects
@@ -407,7 +406,7 @@ declare namespace jQuery {
 			 * @param sId ID of the measurement
 			 * @return current measurement containing id, info and start-timestamp, pause-timestamp (false if error)
 			 */
-			function pause(sId:string): any;
+			function pause(sId: string): any;
 			/**
 			 * Registers an average measurement for a given objects method
 			 * @param sId the id of the measurement
@@ -416,18 +415,18 @@ declare namespace jQuery {
 			 * @param aCategories An optional categories list for the measurement
 			 * @return true if the registration was successful
 			 */
-			function registerMethod(sId:string, oObject:any, sMethod:string, aCategories?:string[]): boolean;
+			function registerMethod(sId: string, oObject: any, sMethod: string, aCategories?: string[]): boolean;
 			/**
 			 * Removes a performance measure
 			 * @param sId ID of the measurement
 			 */
-			function remove(sId:string);
+			function remove(sId: string);
 			/**
 			 * Resumes a performance measure
 			 * @param sId ID of the measurement
 			 * @return current measurement containing id, info and start-timestamp, resume-timestamp (false if error)
 			 */
-			function resume(sId:string): any;
+			function resume(sId: string): any;
 			/**
 			 * Activates or deactivates the performance measure functionality
 			 * Optionally a category or list of categories can be passed to restrict measurements to certain categories
@@ -436,12 +435,12 @@ declare namespace jQuery {
 			 * @param An optional list of categories that should be measured
 			 * @return current state of the perfomance measurement functionality
 			 */
-			function setActive(bOn:boolean, An:string|string[]): boolean;
+			function setActive(bOn: boolean, An: string|string[]): boolean;
 			/**
 			 * Sets the request buffer size for the measurement safely
 			 * @param iSize size of the buffer
 			 */
-			function setRequestBufferSize(iSize:number);
+			function setRequestBufferSize(iSize: number);
 			/**
 			 * Starts a performance measure.
 			 * Optionally a category or list of categories can be passed to allow filtering of measurements.
@@ -450,13 +449,13 @@ declare namespace jQuery {
 			 * @param aCategories An optional list of categories for the measure
 			 * @return current measurement containing id, info and start-timestamp (false if error)
 			 */
-			function start(sId:string, sInfo:string, aCategories?:string|string[]): any;
+			function start(sId: string, sInfo: string, aCategories?: string|string[]): any;
 			/**
 			 * Start an interaction measurements
 			 * @param sType type of the event which triggered the interaction
 			 * @param oSrcElement the control on which the interaction was triggered
 			 */
-			function startInteraction(sType:string, oSrcElement:any);
+			function startInteraction(sType: string, oSrcElement: any);
 			/**
 			 * Unregisters all average measurements
 			 */
@@ -468,7 +467,7 @@ declare namespace jQuery {
 			 * @param sMethod the name of the method
 			 * @return true if the unregistration was successful
 			 */
-			function unregisterMethod(sId:string, oObject:any, sMethod:string): boolean;
+			function unregisterMethod(sId: string, oObject: any, sMethod: string): boolean;
 		}
 	
 		/**
@@ -506,7 +505,7 @@ declare namespace jQuery {
 				 * @return the string from the storage, if the retrieval
 				 * was successful, and null otherwise
 				 */
-				get(sId:string): string;
+				get(sId: string): string;
 				/**
 				 * Returns the type of the storage.
 				 * @return the type of the storage or "unknown"
@@ -526,7 +525,7 @@ declare namespace jQuery {
 				 * @param sStateToStore content to store
 				 * @return true if the data were successfully stored, false otherwise
 				 */
-				put(sId:string, sStateToStore:string): boolean;
+				put(sId: string, sStateToStore: string): boolean;
 				/**
 				 * Deletes the state string stored in the session under the key
 				 * sStorageKeyPrefix + sId.s
@@ -537,7 +536,7 @@ declare namespace jQuery {
 				 * was successful or the data doesn't exist under the specified key,
 				 * and false if the feature is unavailable or a problem occurred
 				 */
-				remove(sId:string): boolean;
+				remove(sId: string): boolean;
 				/**
 				 * Deletes all state strings stored in the session under the key prefix
 				 * sStorageKeyPrefix + sIdPrefix.
@@ -548,7 +547,7 @@ declare namespace jQuery {
 				 * was successful or the data doesn't exist under the specified key,
 				 * and false if the feature is unavailable or a problem occurred
 				 */
-				removeAll(sIdPrefix:string): boolean;
+				removeAll(sIdPrefix: string): boolean;
 			}
 		
 			class Type {
@@ -586,7 +585,7 @@ declare namespace jQuery {
 			 * @return the string from the storage, if the retrieval
 			 * was successful, and null otherwise
 			 */
-			function get(sId:string): string;
+			function get(sId: string): string;
 			/**
 			 * Returns the type of the storage.
 			 * @return the type of the storage or "unknown"
@@ -606,7 +605,7 @@ declare namespace jQuery {
 			 * @param sStateToStore content to store
 			 * @return true if the data were successfully stored, false otherwise
 			 */
-			function put(sId:string, sStateToStore:string): boolean;
+			function put(sId: string, sStateToStore: string): boolean;
 			/**
 			 * Deletes the state string stored in the session under the key
 			 * sStorageKeyPrefix + sId.s
@@ -617,7 +616,7 @@ declare namespace jQuery {
 			 * was successful or the data doesn't exist under the specified key,
 			 * and false if the feature is unavailable or a problem occurred
 			 */
-			function remove(sId:string): boolean;
+			function remove(sId: string): boolean;
 			/**
 			 * Deletes all state strings stored in the session under the key prefix
 			 * sStorageKeyPrefix + sIdPrefix.
@@ -628,7 +627,7 @@ declare namespace jQuery {
 			 * was successful or the data doesn't exist under the specified key,
 			 * and false if the feature is unavailable or a problem occurred
 			 */
-			function removeAll(sIdPrefix:string): boolean;
+			function removeAll(sIdPrefix: string): boolean;
 		}
 	
 		class act {
@@ -992,7 +991,7 @@ declare namespace jQuery {
 				 * @param aArgs List of parameters which should replace the place holders "{n}" (n is the index) in the found locale-specific string value.
 				 * @return The value belonging to the key, if found; otherwise the key itself.
 				 */
-				getText(sKey:string, aArgs?:string[]): string;
+				getText(sKey: string, aArgs?: string[]): string;
 				/**
 				 * Checks whether the text for the given key can be found in the concrete
 				 * resource bundle or not. Neither the custom resource bundles nor the
@@ -1003,14 +1002,14 @@ declare namespace jQuery {
 				 * @param sKey 
 				 * @return true if the text has been found in the concrete bundle
 				 */
-				hasText(sKey:string): boolean;
+				hasText(sKey: string): boolean;
 			}
 		
 			interface UriParameters {
 			}
 		}
 	
-		class Version {
+		class Version  {
 			/**
 			 * Returns a Version instance created from the given parameters.
 			 * 
@@ -1039,7 +1038,7 @@ declare namespace jQuery {
 			 * @param iPatch the patch part of the version number
 			 * @param sSuffix the suffix part of the version number
 			 */
-			constructor(vMajor:number|string|any[]|jQuery.sap.Version, iMinor:number, iPatch:number, sSuffix:string);
+			constructor(vMajor: number|string|any[]|jQuery.sap.Version, iMinor: number, iPatch: number, sSuffix: string);
 			/**
 			 * Compares this version with a given one.
 			 * 
@@ -1081,7 +1080,7 @@ declare namespace jQuery {
 			 * @return <code>true</code> if this version is greater or equal to <code>vMin</code> and smaller
 			 *                   than <code>vMax</code>, <code>false</code> otherwise.
 			 */
-			inRange(vMin:string|any[]|Version, vMax:string|any[]|Version): boolean;
+			inRange(vMin: string|any[]|Version, vMax: string|any[]|Version): boolean;
 			/**
 			 * Returns a string representation of this version.
 			 * @return a string representation of this version.
@@ -1122,7 +1121,7 @@ declare namespace jQuery {
 		 * loading "preload" files that do not define an own module / module value.
 		 * 
 		 * Functionality might be removed/renamed in future, so no code outside the
-		 * sap.ui.core library must use it.
+		 * sapui.core library must use it.
 		 */
 		function _loadJSResourceAsync();
 		/**
@@ -1132,7 +1131,7 @@ declare namespace jQuery {
 		 * @param port The port of the URL
 		 * @param path the path of the URL
 		 */
-		function addUrlWhitelist(protocol:string, host:string, port:string, path:string);
+		function addUrlWhitelist(protocol: string, host: string, port: string, path: string);
 		/**
 		 * Calculate delta of old list and new list
 		 * This partly implements the algorithm described in "A Technique for Isolating Differences Between Files"
@@ -1145,7 +1144,7 @@ declare namespace jQuery {
 		 * @deprecated 
 		 * @return List of changes
 		 */
-		function arrayDiff(aOld:any[], aNew:any[], fnCompare?:any, bUniqueEntries?:boolean): any[];
+		function arrayDiff(aOld: any[], aNew: any[], fnCompare?: any, bUniqueEntries?: boolean): any[];
 		/**
 		 * Calculate delta of old list and new list
 		 * This implements the algorithm described in "A Technique for Isolating Differences Between Files"
@@ -1155,7 +1154,7 @@ declare namespace jQuery {
 		 * @param fnSymbol Function to get entry symbol
 		 * @return List of changes
 		 */
-		function arraySymbolDiff(aOld:any[], aNew:any[], fnSymbol?:any): any[];
+		function arraySymbolDiff(aOld: any[], aNew: any[], fnSymbol?: any): any[];
 		/**
 		 * A simple assertion mechanism that logs a message when a given condition is not met.
 		 * 
@@ -1165,12 +1164,12 @@ declare namespace jQuery {
 		 * @param bResult Result of the checked assertion
 		 * @param vMessage Message that will be logged when the result is <code>false</code>. In case this is a function, the return value of the function will be displayed. This can be used to execute complex code only if the assertion fails.
 		 */
-		function assert(bResult:boolean, vMessage:string|any);
+		function assert(bResult: boolean, vMessage: string|any);
 		/**
 		 * Binds all events for listening with the given callback function.
 		 * @param fnCallback Callback function
 		 */
-		function bindAnyEvent(fnCallback:any);
+		function bindAnyEvent(fnCallback: any);
 		/**
 		 * Shortcut for jQuery("#" + id) with additionally the id being escaped properly.
 		 * I.e.: returns the jQuery object for the DOM element with the given id
@@ -1182,13 +1181,13 @@ declare namespace jQuery {
 		 * @param oContext the context DOM Element
 		 * @return The jQuery object for the DOM element identified by the given sId
 		 */
-		function byId(sId:string, oContext:any): any;
+		function byId(sId: string, oContext: any): any;
 		/**
 		 * Transforms a hyphen separated string to an camel case string.
 		 * @param sString Hyphen separated string
 		 * @return The transformed string
 		 */
-		function camelCase(sString:string): string;
+		function camelCase(sString: string): string;
 		/**
 		 * Converts a character of the string to upper case.<br/>
 		 * If no pos is defined as second parameter or pos is negative or greater than sString the first character will be
@@ -1197,28 +1196,28 @@ declare namespace jQuery {
 		 * @param iPos the position of the character that will be uppercase
 		 * @return The string with the firstletter in upper case
 		 */
-		function charToUpperCase(sString:string, iPos:number): string;
+		function charToUpperCase(sString: string, iPos: number): string;
 		/**
 		 * Checks a given mouseover or mouseout event whether it is
 		 * equivalent to a mouseenter or mousleave event regarding the given DOM reference.
 		 * @param oEvent 
 		 * @param oDomRef 
 		 */
-		function checkMouseEnterOrLeave(oEvent:Event, oDomRef:any);
+		function checkMouseEnterOrLeave(oEvent: Event, oDomRef: any);
 		/**
 		 * Stops the delayed call.
 		 * 
 		 * The function given when calling delayedCall is not called anymore.
 		 * @param sDelayedCallId The id returned, when calling delayedCall
 		 */
-		function clearDelayedCall(sDelayedCallId:string);
+		function clearDelayedCall(sDelayedCallId: string);
 		/**
 		 * Stops the interval call.
 		 * 
 		 * The function given when calling intervalCall is not called anymore.
 		 * @param sIntervalCallId The id returned, when calling intervalCall
 		 */
-		function clearIntervalCall(sIntervalCallId:string);
+		function clearIntervalCall(sIntervalCallId: string);
 		/**
 		 * Clears the whitelist for URL validation
 		 */
@@ -1235,7 +1234,7 @@ declare namespace jQuery {
 		 * @param oDomRefChild The child element (must not be a text node, must be an element)
 		 * @return 'true' if oDomRefChild is contained in oDomRefContainer or oDomRefChild is oDomRefContainer
 		 */
-		function containsOrEquals(oDomRefContainer:any, oDomRefChild:any): boolean;
+		function containsOrEquals(oDomRefContainer: any, oDomRefChild: any): boolean;
 		/**
 		 * Declares a module as existing.
 		 * 
@@ -1247,12 +1246,12 @@ declare namespace jQuery {
 		 *                           or in case of an object {modName: "...", type: "..."}
 		 *                           where modName is the name of the module and the type
 		 *                           could be a specific dot separated extension e.g.
-		 *                           <code>{modName: "sap.ui.core.Dev", type: "view"}</code>
+		 *                           <code>{modName: "sapui.core.Dev", type: "view"}</code>
 		 *                           loads <code>sap/ui/core/Dev.view.js</code> and
-		 *                           registers as <code>sap.ui.core.Dev.view</code>
+		 *                           registers as <code>sapui.core.Dev.view</code>
 		 * @param bCreateNamespace whether to create the parent namespace
 		 */
-		function declare(sModuleName:string|any, bCreateNamespace?:boolean);
+		function declare(sModuleName: string|any, bCreateNamespace?: boolean);
 		/**
 		 * Calls a method after a given delay and returns an id for this timer
 		 * @param iDelay Delay time in milliseconds
@@ -1261,7 +1260,7 @@ declare namespace jQuery {
 		 * @param aParameters Method parameters
 		 * @return Id which can be used to cancel the timer with clearDelayedCall
 		 */
-		function delayedCall(iDelay:number, oObject:any, method:string|any, aParameters?:any[]): string;
+		function delayedCall(iDelay: number, oObject: any, method: string|any, aParameters?: any[]): string;
 		/**
 		 * For the given scroll position measured from the "beginning" of a container (the right edge in RTL mode)
 		 * this method returns the scrollLeft value as understood by the current browser in RTL mode.
@@ -1279,7 +1278,7 @@ declare namespace jQuery {
 		 * @param oDomRef The DOM Element to which scrollLeft will be applied
 		 * @return The scroll position that must be set for the DOM element
 		 */
-		function denormalizeScrollBeginRTL(iNormalizedScrollBegin:number, oDomRef:any): number;
+		function denormalizeScrollBeginRTL(iNormalizedScrollBegin: number, oDomRef: any): number;
 		/**
 		 * For the given scrollLeft value this method returns the scrollLeft value as understood by the current browser in RTL mode.
 		 * This value is specific to the given DOM element, as the computation may involve its dimensions.
@@ -1293,7 +1292,7 @@ declare namespace jQuery {
 		 * @param oDomRef The DOM Element to which scrollLeft will be applied
 		 * @return The scroll position that must be set for the DOM element
 		 */
-		function denormalizeScrollLeftRTL(iNormalizedScrollLeft:number, oDomRef:any): number;
+		function denormalizeScrollLeftRTL(iNormalizedScrollLeft: number, oDomRef: any): number;
 		/**
 		 * Disable touch to mouse handling
 		 */
@@ -1304,43 +1303,43 @@ declare namespace jQuery {
 		 * @param oWindow The window (optional)
 		 * @return The DOMNode identified by the given sId
 		 */
-		function domById(sId:string, oWindow?:any): any;
+		function domById(sId: string, oWindow?: any): any;
 		/**
 		 * Encode the string for inclusion into CSS string literals or identifiers
 		 * @param sString The string to be escaped
 		 * @return The escaped string
 		 */
-		function encodeCSS(sString:string): string;
+		function encodeCSS(sString: string): string;
 		/**
 		 * Encode the string for inclusion into HTML content/attribute
 		 * @param sString The string to be escaped
 		 * @return The escaped string
 		 */
-		function encodeHTML(sString:string): string;
+		function encodeHTML(sString: string): string;
 		/**
 		 * Encode the string for inclusion into a JS string literal
 		 * @param sString The string to be escaped
 		 * @return The escaped string
 		 */
-		function encodeJS(sString:string): string;
+		function encodeJS(sString: string): string;
 		/**
 		 * Encode the string for inclusion into an URL parameter
 		 * @param sString The string to be escaped
 		 * @return The escaped string
 		 */
-		function encodeURL(sString:string): string;
+		function encodeURL(sString: string): string;
 		/**
 		 * Encode a map of parameters into a combined URL parameter string
 		 * @param mParams The map of parameters to encode
 		 * @return The URL encoded parameters
 		 */
-		function encodeURLParameters(mParams:any): string;
+		function encodeURLParameters(mParams: any): string;
 		/**
 		 * Encode the string for inclusion into XML content/attribute
 		 * @param sString The string to be escaped
 		 * @return The escaped string
 		 */
-		function encodeXML(sString:string): string;
+		function encodeXML(sString: string): string;
 		/**
 		 * Checks whether a given sString ends with sEndString
 		 * respecting the case of the strings.
@@ -1348,7 +1347,7 @@ declare namespace jQuery {
 		 * @param sEndString The end string to be searched
 		 * @return True if sString ends with sEndString
 		 */
-		function endsWith(sString:string, sEndString:string): boolean;
+		function endsWith(sString: string, sEndString: string): boolean;
 		/**
 		 * Checks whether a given sString ends with sEndString
 		 * ignoring the case of the strings.
@@ -1356,7 +1355,7 @@ declare namespace jQuery {
 		 * @param sEndString the end string to be searched
 		 * @return true if sString ends with sEndString
 		 */
-		function endsWithIgnoreCase(sString:string, sEndString:string): boolean;
+		function endsWithIgnoreCase(sString: string, sEndString: string): boolean;
 		/**
 		 * Compares the two given values for equality, especially takes care not to compare
 		 * arrays and objects by reference, but compares their content.
@@ -1367,7 +1366,7 @@ declare namespace jQuery {
 		 * @param contains Whether all existing properties in a are equal as in b
 		 * @return Whether a and b are equal
 		 */
-		function equal(a:any, b:any, maxDepth?:number, contains?:boolean): boolean;
+		function equal(a: any, b: any, maxDepth?: number, contains?: boolean): boolean;
 		/**
 		 * Encode the string for inclusion into HTML content/attribute.
 		 * Old name "escapeHTML" kept for backward compatibility
@@ -1375,27 +1374,27 @@ declare namespace jQuery {
 		 * @deprecated Has been renamed, use {@link jQuery.sap.encodeHTML} instead.
 		 * @return The escaped string
 		 */
-		function escapeHTML(sString:string): string;
+		function escapeHTML(sString: string): string;
 		/**
 		 * This function escapes the reserved letters in Regular Expression
 		 * @param sString string to escape
 		 * @return The escaped string
 		 */
-		function escapeRegExp(sString:string): string;
+		function escapeRegExp(sString: string): string;
 		/**
 		 * Returns a new constructor function that creates objects with
 		 * the given prototype.
 		 * @param oPrototype Prototype to use for the new objects
 		 * @return the newly created constructor function
 		 */
-		function factory(oPrototype:any): any;
+		function factory(oPrototype: any): any;
 		/**
 		 * Calls focus() on the given DOM element, but catches and ignores any errors that occur when doing so.
 		 * (i.e. IE8 throws an error when the DOM element is invisible or disabled)
 		 * @param oDomRef The DOM element to focus (or null - in this case the method does nothing)
 		 * @return Whether the focus() command was executed without an error
 		 */
-		function focus(oDomRef:any): boolean;
+		function focus(oDomRef: any): boolean;
 		/**
 		 * Creates a string from a pattern by replacing placeholders with concrete values.
 		 * 
@@ -1435,7 +1434,7 @@ declare namespace jQuery {
 		 * @param aValues The values to be used instead of the placeholders.
 		 * @return The formatted result string
 		 */
-		function formatMessage(sPattern:string, aValues?:any[]): string;
+		function formatMessage(sPattern: string, aValues?: any[]): string;
 		/**
 		 * Returns the names of all declared modules.
 		 * @return the names of all declared modules
@@ -1457,7 +1456,7 @@ declare namespace jQuery {
 		 * @param sSuffix suffix to be added to the resulting path
 		 * @return calculated path (URL) to the given module
 		 */
-		function getModulePath(sModuleName:string, sSuffix:string): string;
+		function getModulePath(sModuleName: string, sSuffix: string): string;
 		/**
 		 * Returns a JavaScript object which is identified by a sequence of names.
 		 * 
@@ -1496,7 +1495,7 @@ declare namespace jQuery {
 		 * @param oContext the context to execute the search in
 		 * @return The value of the named object
 		 */
-		function getObject(sName:string, iNoCreates?:number, oContext?:any): any;
+		function getObject(sName: string, iNoCreates?: number, oContext?: any): any;
 		/**
 		 * Converts a UI5 module name to a unified resource name.
 		 * 
@@ -1508,7 +1507,7 @@ declare namespace jQuery {
 		 * @param sModuleName Module name as a dot separated name
 		 * @param sSuffix Suffix to add to the final resource name
 		 */
-		function getResourceName(sModuleName:string, sSuffix?:string);
+		function getResourceName(sModuleName: string, sSuffix?: string);
 		/**
 		 * Determines the URL for a resource given its unified resource name.
 		 * 
@@ -1535,7 +1534,7 @@ declare namespace jQuery {
 		 * </ul>
 		 * 
 		 * UI5 APIs that only deal with Javascript resources, use a slight variation of this scheme,
-		 * where the extension '.js' is always omitted (see {@link sap.ui.define}, {@link sap.ui.require}).
+		 * where the extension '.js' is always omitted (see {@link sapui.define}, {@link sapui.require}).
 		 * 
 		 * 
 		 * <b>Relationship to old Module Name Syntax</b>
@@ -1554,7 +1553,7 @@ declare namespace jQuery {
 		 * @param sResourceName unified resource name of the resource
 		 * @return URL to load the resource from
 		 */
-		function getResourcePath(sResourceName:string): string;
+		function getResourcePath(sResourceName: string): string;
 		/**
 		 * Returns a new function that returns the given <code>oValue</code> (using its closure).
 		 * 
@@ -1565,7 +1564,7 @@ declare namespace jQuery {
 		 * @param oValue The value that the getter should return
 		 * @return The new getter function
 		 */
-		function getter(oValue:any): any;
+		function getter(oValue: any): any;
 		/**
 		 * Creates and returns a new instance of {@link jQuery.sap.util.UriParameters}.
 		 * 
@@ -1586,7 +1585,7 @@ declare namespace jQuery {
 		 * @param sUri Uri to determine the parameters for
 		 * @return A new URI parameters instance
 		 */
-		function getUriParameters(sUri:string): sap.util.UriParameters;
+		function getUriParameters(sUri: string): sap.util.UriParameters;
 		/**
 		 * Gets the whitelist for URL validation.
 		 * @return A copy of the whitelist
@@ -1604,7 +1603,7 @@ declare namespace jQuery {
 		 * @param sString camel case string
 		 * @return The transformed string
 		 */
-		function hyphen(sString:string): string;
+		function hyphen(sString: string): string;
 		/**
 		 * Includes the script (via &lt;script&gt;-tag) into the head for the
 		 * specified <code>sUrl</code> and optional <code>sId</code>.
@@ -1617,7 +1616,7 @@ declare namespace jQuery {
 		 *            handler of the <code>Promise</code> and the one for the <code>fnErrorCallback</code>
 		 *            applies to the <code>reject</code> handler of the <code>Promise</code>.
 		 */
-		function includeScript(vUrl:string|any, sId?:string, fnLoadCallback?:any, fnErrorCallback?:any): void|any;
+		function includeScript(vUrl: string|any, sId?: string, fnLoadCallback?: any, fnErrorCallback?: any): void|any;
 		/**
 		 * Includes the specified stylesheet via a &lt;link&gt;-tag in the head of the current document. If there is call to
 		 * <code>includeStylesheet</code> providing the sId of an already included stylesheet, the existing element will be
@@ -1637,7 +1636,7 @@ declare namespace jQuery {
 		 *            handler of the <code>Promise</code> and the one for the <code>fnErrorCallback</code>
 		 *            applies to the <code>reject</code> handler of the <code>Promise</code>.
 		 */
-		function includeStyleSheet(vUrl:string|any, sId?:string, fnLoadCallback?:any, fnErrorCallback?:any): void|any;
+		function includeStyleSheet(vUrl: string|any, sId?: string, fnLoadCallback?: any, fnErrorCallback?: any): void|any;
 		/**
 		 * Does some basic modifications to the HTML page that make it more suitable for mobile apps.
 		 * Only the first call to this method is executed, subsequent calls are ignored. Note that this method is also called by the constructor of toplevel controls like sap.m.App, sap.m.SplitApp and sap.m.Shell.
@@ -1658,7 +1657,7 @@ declare namespace jQuery {
 		 * </ul>
 		 * @param options configures what exactly should be done
 		 */
-		function initMobile(options?:any);
+		function initMobile(options?: any);
 		/**
 		 * Calls a method after a given interval and returns an id for this interval.
 		 * @param iInterval Interval time in milliseconds
@@ -1667,7 +1666,7 @@ declare namespace jQuery {
 		 * @param aParameters Method parameters
 		 * @return Id which can be used to cancel the interval with clearIntervalCall
 		 */
-		function intervalCall(iInterval:number, oObject:any, method:string|any, aParameters?:any[]): string;
+		function intervalCall(iInterval: number, oObject: any, method: string|any, aParameters?: any[]): string;
 		/**
 		 * Check whether a given module has been loaded / declared already.
 		 * 
@@ -1689,13 +1688,13 @@ declare namespace jQuery {
 		 * @param bIncludePreloaded whether preloaded modules should be reported as declared.
 		 * @return whether the module has been declared already
 		 */
-		function isDeclared(sModuleName:string, bIncludePreloaded?:boolean): boolean;
+		function isDeclared(sModuleName: string, bIncludePreloaded?: boolean): boolean;
 		/**
 		 * Whether the given resource has been loaded (or preloaded).
 		 * @param sResourceName Name of the resource to check, in unified resource name format
 		 * @return Whether the resource has been loaded already
 		 */
-		function isResourceLoaded(sResourceName:string): boolean;
+		function isResourceLoaded(sResourceName: string): boolean;
 		/**
 		 * Returns a new object which has the given <code>oPrototype</code> as its prototype.
 		 * 
@@ -1704,13 +1703,13 @@ declare namespace jQuery {
 		 * @param oPrototype Prototype to use for the new object
 		 * @return new object
 		 */
-		function newObject(oPrototype:any): any;
+		function newObject(oPrototype: any): any;
 		/**
 		 * Returns the window reference for a DomRef
 		 * @param oDomRef The DOM reference
 		 * @return Window reference
 		 */
-		function ownerWindow(oDomRef:any): any;
+		function ownerWindow(oDomRef: any): any;
 		/**
 		 * Pads a string on the left side until is has the given length.<br/>
 		 * @param sString The string to be padded
@@ -1718,7 +1717,7 @@ declare namespace jQuery {
 		 * @param iLength the target length of the string
 		 * @return The padded string
 		 */
-		function padLeft(sString:string, sPadChar:string, iLength:number): string;
+		function padLeft(sString: string, sPadChar: string, iLength: number): string;
 		/**
 		 * Pads a string on the right side until is has the given length.<br/>
 		 * @param sString The string to be padded
@@ -1726,7 +1725,7 @@ declare namespace jQuery {
 		 * @param iLength the target length of the string
 		 * @return The padded string
 		 */
-		function padRight(sString:string, sPadChar:string, iLength:number): string;
+		function padRight(sString: string, sPadChar: string, iLength: number): string;
 		/**
 		 * Parses the specified XML formatted string text using native parsing
 		 * function of the browser and returns a valid XML document. If an error
@@ -1737,7 +1736,7 @@ declare namespace jQuery {
 		 * @return the parsed XML document with a parseError property as described in
 		 *         getParseError. An error occurred if the errorCode property of the parseError is != 0.
 		 */
-		function parseXML(sXMLText:string): any;
+		function parseXML(sXMLText: string): any;
 		/**
 		 * Creates and returns a new instance of {@link jQuery.sap.util.Properties}.
 		 * 
@@ -1765,7 +1764,7 @@ declare namespace jQuery {
 		 * @param mParams Parameters used to initialize the property list
 		 * @return A new property list instance (synchronous case). In case of asynchronous loading an ECMA Script 6 Promise is returned.
 		 */
-		function properties(mParams?:any): sap.util.Properties|any;
+		function properties(mParams?: any): sap.util.Properties|any;
 		/**
 		 * Registers an URL prefix for a module name prefix.
 		 * 
@@ -1794,14 +1793,14 @@ declare namespace jQuery {
 		 * @param sModuleName module name to register a path for
 		 * @param vUrlPrefix path prefix to register, either a string literal or an object (e.g. {url : 'url/to/res', 'final': true})
 		 */
-		function registerModulePath(sModuleName:string, vUrlPrefix:string|any);
+		function registerModulePath(sModuleName: string, vUrlPrefix: string|any);
 		/**
 		 * Adds all resources from a preload bundle to the preload cache.
 		 * 
 		 * When a resource exists already in the cache, the new content is ignored.
 		 * @param oData Preload bundle
 		 */
-		function registerPreloadedModules(oData:any);
+		function registerPreloadedModules(oData: any);
 		/**
 		 * Registers an URL prefix for a resource name prefix.
 		 * 
@@ -1829,12 +1828,12 @@ declare namespace jQuery {
 		 * @param sResourceNamePrefix in unified resource name syntax
 		 * @param vUrlPrefix prefix to use instead of the sResourceNamePrefix, either a string literal or an object (e.g. {url : 'url/to/res', 'final': true})
 		 */
-		function registerResourcePath(sResourceNamePrefix:string, vUrlPrefix:string|any);
+		function registerResourcePath(sResourceNamePrefix: string, vUrlPrefix: string|any);
 		/**
 		 * Removes a whitelist entry for URL validation.
 		 * @param iIndex index of entry
 		 */
-		function removeUrlWhitelist(iIndex:number);
+		function removeUrlWhitelist(iIndex: number);
 		/**
 		 * Ensures that the given module is loaded and executed before execution of the
 		 * current script continues.
@@ -1847,18 +1846,18 @@ declare namespace jQuery {
 		 *                              or in case of an object {modName: "...", type: "..."}
 		 *                              where modName is the name of the module and the type
 		 *                              could be a specific dot separated extension e.g.
-		 *                              <code>{modName: "sap.ui.core.Dev", type: "view"}</code>
+		 *                              <code>{modName: "sapui.core.Dev", type: "view"}</code>
 		 *                              loads <code>sap/ui/core/Dev.view.js</code> and
-		 *                              registers as <code>sap.ui.core.Dev.view</code>
+		 *                              registers as <code>sapui.core.Dev.view</code>
 		 */
-		function require(vModuleName:string|any);
+		function require(vModuleName: string|any);
 		/**
 		 * Creates and returns a new instance of {@link jQuery.sap.util.ResourceBundle}
 		 * using the given URL and locale to determine what to load.
 		 * @param mParams Parameters used to initialize the resource bundle
 		 * @return A new resource bundle instance or a ECMA Script 6 Promise (in asynchronous case)
 		 */
-		function resources(mParams?:any): sap.util.ResourceBundle|any;
+		function resources(mParams?: any): sap.util.ResourceBundle|any;
 		/**
 		 * Returns the size (width of the vertical / height of the horizontal) native browser scrollbars.
 		 * 
@@ -1867,13 +1866,13 @@ declare namespace jQuery {
 		 * @param bForce force recalculation of size (e.g. when CSS was changed). When no classes are passed all calculated sizes are reset.
 		 * @return JSON object with properties <code>width</code> and <code>height</code> (the values are of type number and are pixels).
 		 */
-		function scrollbarSize(sClasses?:string, bForce?:boolean): any;
+		function scrollbarSize(sClasses?: string, bForce?: boolean): any;
 		/**
 		 * Serializes the specified XML document into a string representation.
 		 * @param oXMLDocument the XML document object to be serialized as string
 		 * @return the serialized XML string
 		 */
-		function serializeXML(oXMLDocument:string): any;
+		function serializeXML(oXMLDocument: string): any;
 		/**
 		 * Sets the bookmark icon for desktop browsers and the icon to be displayed on the home screen of iOS devices after the user does "add to home screen".
 		 * 
@@ -1912,7 +1911,7 @@ declare namespace jQuery {
 		 * On Android these icons may or may not be used by the device. Apparently chances can be improved by using icons with glare effect, so the "precomposed" property can be set to "true". Some Android devices may also use the favicon for bookmarks instead of the home icons.</li>
 		 * @param oIcons 
 		 */
-		function setIcons(oIcons:any);
+		function setIcons(oIcons: any);
 		/**
 		 * Sets the "apple-mobile-web-app-capable" and "mobile-web-app-capable" meta information which defines whether the application is loaded
 		 * in full screen mode (browser address bar and toolbar are hidden) after the user does "add to home screen" on mobile devices. Currently
@@ -1924,7 +1923,7 @@ declare namespace jQuery {
 		 * Note: this function only has effect when the application runs on iOS Safari and mobile Chrome from version 31.
 		 * @param bValue whether the Application will be loaded in full screen mode after added to home screen from iOS Safari or mobile Chrome from version 31.
 		 */
-		function setMobileWebAppCapable(bValue:boolean);
+		function setMobileWebAppCapable(bValue: boolean);
 		/**
 		 * Sets an object property to a given value, where the property is
 		 * identified by a sequence of names (path).
@@ -1941,7 +1940,7 @@ declare namespace jQuery {
 		 * @param vValue value to be set, can have any type
 		 * @param oContext the context to execute the search in
 		 */
-		function setObject(sName:string, vValue:any, oContext?:any);
+		function setObject(sName: string, vValue: any, oContext?: any);
 		/**
 		 * Convenience wrapper around <code>jQuery.ajax()</code> that avoids the need for callback functions when
 		 * synchronous calls are made. If the setting <code>complexResult</code> is true (default), then the return value
@@ -1963,7 +1962,7 @@ declare namespace jQuery {
 		 * @param oOrigSettings the ajax() settings
 		 * @return result, see above
 		 */
-		function sjax(oOrigSettings:string);
+		function sjax(oOrigSettings: string);
 		/**
 		 * Checks whether a given sString starts with sStartString
 		 * respecting the case of the strings.
@@ -1971,7 +1970,7 @@ declare namespace jQuery {
 		 * @param sStartString The start string to be searched
 		 * @return True if sString ends with sEndString
 		 */
-		function startsWith(sString:string, sStartString:string): boolean;
+		function startsWith(sString: string, sStartString: string): boolean;
 		/**
 		 * Checks whether a given sString starts with sStartString
 		 * ignoring the case of the strings.
@@ -1979,7 +1978,7 @@ declare namespace jQuery {
 		 * @param sStartString The start string to be searched
 		 * @return True if sString ends with sEndString
 		 */
-		function startsWithIgnoreCase(sString:string, sStartString:string): boolean;
+		function startsWithIgnoreCase(sString: string, sStartString: string): boolean;
 		/**
 		 * Convenience wrapper for {@link jQuery.sap.sjax} that enforeces the Http method GET and defaults the
 		 * data type of the result to 'text'.
@@ -1988,7 +1987,7 @@ declare namespace jQuery {
 		 * @param sDataType the type of data expected from the server, default is "text"
 		 * @return result @see jQuery.sap.sjax
 		 */
-		function syncGet(sUrl:string, data:string|any, sDataType?:string);
+		function syncGet(sUrl: string, data: string|any, sDataType?: string);
 		/**
 		 * Convenience wrapper for {@link jQuery.sap.sjax} that enforces the Http method GET and the data type 'json'.
 		 * If a fallback value is given, the function simply returns the response as an object or - if some error occurred -
@@ -2004,7 +2003,7 @@ declare namespace jQuery {
 		 * @param fallback if set, only data is returned (and this fallback instead in case of errors); if unset, a result structure is returned
 		 * @return result @see jQuery.sap.sjax
 		 */
-		function syncGetJSON(sUrl:string, data:string|any, fallback?:any);
+		function syncGetJSON(sUrl: string, data: string|any, fallback?: any);
 		/**
 		 * Convenience wrapper for {@link jQuery.sap.sjax} that enforces the Http method GET and the data type 'text'.
 		 * If a fallback value is given, the function simply returns the response as a text or - if some error occurred -
@@ -2018,7 +2017,7 @@ declare namespace jQuery {
 		 * @param fallback if set, only data is returned (and this fallback instead in case of errors); if unset, a result structure is returned
 		 * @return result @see jQuery.sap.sjax
 		 */
-		function syncGetText(sUrl:string, data:string|any, fallback?:string);
+		function syncGetText(sUrl: string, data: string|any, fallback?: string);
 		/**
 		 * Convenience wrapper for {@link jQuery.sap.sjax} that enforces the Http method POST and defaults the
 		 * data type of the result to 'text'.
@@ -2027,7 +2026,7 @@ declare namespace jQuery {
 		 * @param sDataType the type of data expected from the server, default is "text"
 		 * @return result @see jQuery.sap.sjax
 		 */
-		function syncPost(sUrl:string, data:string|any, sDataType?:string);
+		function syncPost(sUrl: string, data: string|any, sDataType?: string);
 		/**
 		 * Search ancestors of the given source DOM element for the specified CSS class name.
 		 * If the class name is found, set it to the root DOM element of the target control.
@@ -2037,7 +2036,7 @@ declare namespace jQuery {
 		 * @param vDestination target jQuery object or a control.
 		 * @return Target element
 		 */
-		function syncStyleClass(sStyleClass:string, vSource:any|sapui.core.Control|string, vDestination:any|sapui.core.Control): any;
+		function syncStyleClass(sStyleClass: string, vSource: any|sapui.core.Control|string, vDestination: any|sapui.core.Control): any;
 		/**
 		 * Creates and returns a pseudo-unique id.
 		 * 
@@ -2049,7 +2048,7 @@ declare namespace jQuery {
 		 * Unbinds all events for listening with the given callback function.
 		 * @param fnCallback Callback function
 		 */
-		function unbindAnyEvent(fnCallback:any);
+		function unbindAnyEvent(fnCallback: any);
 		/**
 		 * Sorts the given array in-place and removes any duplicates (identified by "===").
 		 * 
@@ -2057,7 +2056,7 @@ declare namespace jQuery {
 		 * @param a An Array of any type
 		 * @return Same array as given (for chaining)
 		 */
-		function unique(a:any[]): any[];
+		function unique(a: any[]): any[];
 		/**
 		 * Validates an URL. Check if it's not a script or other security issue.
 		 * 
@@ -2132,7 +2131,7 @@ declare namespace jQuery {
 		 * @param sUrl 
 		 * @return true if valid, false if not valid
 		 */
-		function validateUrl(sUrl:string);
+		function validateUrl(sUrl: string);
 	}
 
 	/**
@@ -2186,7 +2185,7 @@ declare namespace jQuery {
 		var newFlexBoxLayout: boolean;
 	}
 
-	class Event {
+	class Event  {
 		/**
 		 * Constructor for a jQuery.Event object.<br/>
 		 */
@@ -2211,32 +2210,32 @@ declare namespace jQuery {
 		 * @param sType The name of the pseudo type this event should be checked for.
 		 * @return <code>true</code> if this instance of jQuery.Event is of the given sType, <code>false</code> otherwise.
 		 */
-		isPseudoType(sType:string): boolean;
+		isPseudoType(sType: string): boolean;
 	}
 	/**
 	 * Adds the given ID reference to the aria-describedby attribute.
 	 * @param sID The ID reference of an element
 	 * @return <code>this</code> to allow method chaining.
 	 */
-	function addAriaDescribedBy(sID:string): any;
+	function addAriaDescribedBy(sID: string): any;
 	/**
 	 * Adds the given ID reference to the the aria-labelledby attribute.
 	 * @param sID The ID reference of an element
 	 * @return <code>this</code> to allow method chaining.
 	 */
-	function addAriaLabelledBy(sID:string): any;
+	function addAriaLabelledBy(sID: string): any;
 	/**
 	 * Extension function to the jQuery.fn which identifies SAPUI5 controls in the given jQuery context.
 	 * @param idx optional parameter to return the control instance at the given idx's position in the array.
 	 * @return depending on the given context and idx parameter an array of controls, an instance or null.
 	 */
-	function control(idx?:number): sapui.core.Control[]|sapui.core.Control;
+	function control(idx?: number): sapui.core.Control[]|sapui.core.Control;
 	/**
 	 * Sets or gets the position of the cursor in an element that supports cursor positioning
 	 * @param iPos The cursor position to set (or no parameter to retrieve the cursor position)
 	 * @return The cursor position (or the jQuery collection if the position has been set)
 	 */
-	function cursorPos(iPos:number): number|any;
+	function cursorPos(iPos: number): number|any;
 	/**
 	 * Disable HTML elements selection.
 	 * @return <code>this</code> to allow method chaining.
@@ -2279,7 +2278,7 @@ declare namespace jQuery {
 	 * @param sValue Value of the attribute (optional)
 	 * @return null or the DOM reference
 	 */
-	function parentByAttribute(sAttribute:string, sValue:string): any;
+	function parentByAttribute(sAttribute: string, sValue: string): any;
 	/**
 	 * Returns a rectangle describing the current visual positioning of the first DOM object in the collection
 	 * (or null if no element was given)
@@ -2292,24 +2291,24 @@ declare namespace jQuery {
 	 * @param iPosY 
 	 * @return Whether X and Y are inside this Rectangle's boundaries
 	 */
-	function rectContains(iPosX:number, iPosY:number): boolean;
+	function rectContains(iPosX: number, iPosY: number): boolean;
 	/**
 	 * Removes the given ID reference from the aria-describedby attribute.
 	 * @param sID The ID reference of an element
 	 * @return <code>this</code> to allow method chaining.
 	 */
-	function removeAriaDescribedBy(sID:string): any;
+	function removeAriaDescribedBy(sID: string): any;
 	/**
 	 * Removes the given ID reference from the aria-labelledby attribute.
 	 * @param sID The ID reference of an element
 	 * @return <code>this</code> to allow method chaining.
 	 */
-	function removeAriaLabelledBy(sID:string): any;
+	function removeAriaLabelledBy(sID: string): any;
 	/**
 	 * 
 	 * @param oRootControl 
 	 */
-	function root(oRootControl:any);
+	function root(oRootControl: any);
 	/**
 	 * Sets or returns the scrollLeft value of the first element in the given jQuery collection in right-to-left mode.
 	 * Precondition: The element is rendered in RTL mode.
@@ -2322,7 +2321,7 @@ declare namespace jQuery {
 	 * @param iPos 
 	 * @return The jQuery collection if iPos is given, otherwise the scroll position, counted from the leftmost position
 	 */
-	function scrollLeftRTL(iPos:number): any|number;
+	function scrollLeftRTL(iPos: number): any|number;
 	/**
 	 * Returns the MIRRORED scrollLeft value of the first element in the given jQuery collection in right-to-left mode.
 	 * Precondition: The element is rendered in RTL mode.
@@ -2342,10 +2341,10 @@ declare namespace jQuery {
 	 * @param iEnd End position of the selection (exclusive)
 	 * @return The jQuery collection
 	 */
-	function selectText(iStart:number, iEnd:number): any;
+	function selectText(iStart: number, iEnd: number): any;
 	/**
 	 * 
 	 * @param iIdx 
 	 */
-	function uiarea(iIdx:number);
+	function uiarea(iIdx: number);
 }

@@ -1,9 +1,11 @@
+
+
 /**
  * SAP UxAP
  */
 declare namespace sap.uxap {
 
-	class AnchorBar extends sap.m.Toolbar{
+	class AnchorBar extends sap.m.Toolbar {
 		/**
 		 * Constructor for a new AnchorBar.
 		 * 
@@ -14,23 +16,19 @@ declare namespace sap.uxap {
 		 * @param sId id for the new control, generated automatically if no id is given
 		 * @param mSettings initial settings for the new control
 		 */
-		constructor(sId?:string, mSettings?:any);
+		constructor(sId?: string, mSettings?: sap.uxap.AnchorBarMetadata);
 		/**
-		 * Creates a new subclass of class sap.uxap.AnchorBar with name <code>sClassName</code>
-		 * and enriches it with the information contained in <code>oClassInfo</code>.
+		 * Constructor for a new AnchorBar.
 		 * 
-		 * <code>oClassInfo</code> might contain the same kind of information as described in {@link sap.m.Toolbar.extend}.
-		 * @param sClassName Name of the class being created
-		 * @param oClassInfo Object literal with information about the class
-		 * @param FNMetaImpl Constructor function for the metadata object; if not given, it defaults to <code>sap.ui.core.ElementMetadata</code>
-		 * @return Created class / constructor function
+		 * 
+		 * Accepts an object literal <code>mSettings</code> that defines initial
+		 * property values, aggregated and associated objects as well as event handlers.
+		 * See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object.
+		 * @note Any overloads to support not documented metadata
+		 * @param sId id for the new control, generated automatically if no id is given
+		 * @param mSettings initial settings for the new control
 		 */
-		// extend(sClassName:string, oClassInfo?:any, FNMetaImpl?:any): any;
-		/**
-		 * Returns a metadata object for class sap.uxap.AnchorBar.
-		 * @return Metadata object describing this class
-		 */
-		// getmetadata(): sap.ui.base.Metadata;
+		constructor(sId?: string, mSettings?: any);
 		/**
 		 * Returns a sap.ui.core.delegate.ScrollEnablement object used to handle scrolling.
 		 * @return 
@@ -64,13 +62,13 @@ declare namespace sap.uxap {
 		 * @param sId The Section ID to scroll to
 		 * @param duration Scroll duration (in ms). Default value is 0
 		 */
-		scrollToSection(sId:string, duration:number);
+		scrollToSection(sId: string, duration: number);
 		/**
 		 * Sets the associated <code>selectedButton</code>.
 		 * @param oSelectedButton ID of an element which becomes the new target of this selectedButton association; alternatively, an element instance may be given
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setSelectedButton(oSelectedButton:sap.ui.core.ID|sap.m.Button): AnchorBar;
+		setSelectedButton(oSelectedButton: sap.ui.core.ID|sap.m.Button): AnchorBar;
 		/**
 		 * Sets a new value for property <code>showPopover</code>.
 		 * 
@@ -82,7 +80,7 @@ declare namespace sap.uxap {
 		 * @param bShowPopover New value for property <code>showPopover</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setShowPopover(bShowPopover:boolean): AnchorBar;
+		setShowPopover(bShowPopover: boolean): AnchorBar;
 		/**
 		 * Sets a new value for property <code>upperCase</code>.
 		 * 
@@ -94,10 +92,10 @@ declare namespace sap.uxap {
 		 * @param bUpperCase New value for property <code>upperCase</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setUpperCase(bUpperCase:boolean): AnchorBar;
+		setUpperCase(bUpperCase: boolean): AnchorBar;
 	}
 
-	class BlockBase extends sap.ui.core.Control{
+	class BlockBase extends sap.ui.core.Control {
 		/**
 		 * Constructor for a new BlockBase.
 		 * 
@@ -108,29 +106,30 @@ declare namespace sap.uxap {
 		 * @param sId id for the new control, generated automatically if no id is given
 		 * @param mSettings initial settings for the new control
 		 */
-		constructor(sId?:string, mSettings?:any);
+		constructor(sId?: string, mSettings?: sap.uxap.BlockBaseMetadata);
+		/**
+		 * Constructor for a new BlockBase.
+		 * 
+		 * 
+		 * Accepts an object literal <code>mSettings</code> that defines initial
+		 * property values, aggregated and associated objects as well as event handlers.
+		 * See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object.
+		 * @note Any overloads to support not documented metadata
+		 * @param sId id for the new control, generated automatically if no id is given
+		 * @param mSettings initial settings for the new control
+		 */
+		constructor(sId?: string, mSettings?: any);
 		/**
 		 * Adds some mapping to the aggregation <code>mappings</code>.
 		 * @param oMapping the mapping to add; if empty, nothing is inserted
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		addMapping(oMapping:ModelMapping): BlockBase;
+		addMapping(oMapping: ModelMapping): BlockBase;
 		/**
 		 * Destroys all the mappings in the aggregation <code>mappings</code>.
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
 		destroyMappings(): BlockBase;
-		/**
-		 * Creates a new subclass of class sap.uxap.BlockBase with name <code>sClassName</code>
-		 * and enriches it with the information contained in <code>oClassInfo</code>.
-		 * 
-		 * <code>oClassInfo</code> might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
-		 * @param sClassName Name of the class being created
-		 * @param oClassInfo Object literal with information about the class
-		 * @param FNMetaImpl Constructor function for the metadata object; if not given, it defaults to <code>sap.ui.core.ElementMetadata</code>
-		 * @return Created class / constructor function
-		 */
-		// extend(sClassName:string, oClassInfo?:any, FNMetaImpl?:any): any;
 		/**
 		 * Gets current value of property <code>columnLayout</code>.
 		 * 
@@ -161,11 +160,6 @@ declare namespace sap.uxap {
 		 * @return 
 		 */
 		getMappings(): ModelMapping[];
-		/**
-		 * Returns a metadata object for class sap.uxap.BlockBase.
-		 * @return Metadata object describing this class
-		 */
-		// getmetadata(): sap.ui.base.Metadata;
 		/**
 		 * Gets current value of property <code>mode</code>.
 		 * 
@@ -204,7 +198,7 @@ declare namespace sap.uxap {
 		 * @param oMapping The mapping whose index is looked for
 		 * @return The index of the provided control in the aggregation if found, or -1 otherwise
 		 */
-		indexOfMapping(oMapping:ModelMapping): number;
+		indexOfMapping(oMapping: ModelMapping): number;
 		/**
 		 * Inserts a mapping into the aggregation <code>mappings</code>.
 		 * @param oMapping the mapping to insert; if empty, nothing is inserted
@@ -214,7 +208,7 @@ declare namespace sap.uxap {
 		 *              the last position
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		insertMapping(oMapping:ModelMapping, iIndex:number): BlockBase;
+		insertMapping(oMapping: ModelMapping, iIndex: number): BlockBase;
 		/**
 		 * Removes all the controls from the aggregation <code>mappings</code>.
 		 * 
@@ -227,12 +221,12 @@ declare namespace sap.uxap {
 		 * @param vMapping The mapping to remove or its index or id
 		 * @return The removed mapping or <code>null</code>
 		 */
-		removeMapping(vMapping:number|string|ModelMapping): ModelMapping;
+		removeMapping(vMapping: number|string|ModelMapping): ModelMapping;
 		/**
 		 * Set the column layout for this particular block.
 		 * @param sLayout The column layout to apply to the control
 		 */
-		setColumnLayout(sLayout:string);
+		setColumnLayout(sLayout: string);
 		/**
 		 * Sets a new value for property <code>formAdjustment</code>.
 		 * 
@@ -248,23 +242,36 @@ declare namespace sap.uxap {
 		 * @param sFormAdjustment New value for property <code>formAdjustment</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setFormAdjustment(sFormAdjustment:BlockBaseFormAdjustment): BlockBase;
+		setFormAdjustment(sFormAdjustment: BlockBaseFormAdjustment): BlockBase;
 		/**
 		 * Set the view mode for this particular block.
 		 * @param sMode the mode to apply to the control (that should be synchronized with view declared)
 		 * @return this
 		 */
-		setMode(sMode:string): any;
+		setMode(sMode: string): any;
 		/**
 		 * Sets the associated <code>selectedView</code>.
 		 * @param oSelectedView ID of an element which becomes the new target of this selectedView association; alternatively, an element instance may be given
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setSelectedView(oSelectedView:sap.ui.core.ID|sap.ui.core.Control): BlockBase;
+		setSelectedView(oSelectedView: sap.ui.core.ID|sap.ui.core.Control): BlockBase;
 		/**
 		 * Setter for the visibility of the block.
 		 */
 		setVisible();
+		/**
+		 * Sets a new value for property <code>visible</code>.
+		 * 
+		 * Whether the control should be visible on the screen. If set to false, a placeholder is rendered instead of the real control
+		 * 
+		 * When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.
+		 * 
+		 * Default value is <code>true</code>.
+		 * @note Overload from base type sap.ui.core.Control
+		 * @param bVisible New value for property <code>visible</code>
+		 * @return Reference to <code>this</code> in order to allow method chaining
+		 */
+		setVisible(bVisible: boolean): sap.ui.core.Control;
 	}
 
 	class BlockBaseFormAdjustment {
@@ -282,7 +289,7 @@ declare namespace sap.uxap {
 		static OneColumn: string;
 	}
 
-	class BreadCrumbs extends sap.ui.core.Control{
+	class BreadCrumbs extends sap.ui.core.Control {
 		/**
 		 * Constructor for a new BreadCrumbs.
 		 * 
@@ -293,13 +300,25 @@ declare namespace sap.uxap {
 		 * @param sId id for the new control, generated automatically if no id is given
 		 * @param mSettings initial settings for the new control
 		 */
-		constructor(sId?:string, mSettings?:any);
+		constructor(sId?: string, mSettings?: sap.uxap.BreadCrumbsMetadata);
+		/**
+		 * Constructor for a new BreadCrumbs.
+		 * 
+		 * 
+		 * Accepts an object literal <code>mSettings</code> that defines initial
+		 * property values, aggregated and associated objects as well as event handlers.
+		 * See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object.
+		 * @note Any overloads to support not documented metadata
+		 * @param sId id for the new control, generated automatically if no id is given
+		 * @param mSettings initial settings for the new control
+		 */
+		constructor(sId?: string, mSettings?: any);
 		/**
 		 * Adds some link to the aggregation <code>links</code>.
 		 * @param oLink the link to add; if empty, nothing is inserted
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		addLink(oLink:sap.m.Link): BreadCrumbs;
+		addLink(oLink: sap.m.Link): BreadCrumbs;
 		/**
 		 * Destroys the currentLocation in the aggregation <code>currentLocation</code>.
 		 * @return Reference to <code>this</code> in order to allow method chaining
@@ -310,17 +329,6 @@ declare namespace sap.uxap {
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
 		destroyLinks(): BreadCrumbs;
-		/**
-		 * Creates a new subclass of class sap.uxap.BreadCrumbs with name <code>sClassName</code>
-		 * and enriches it with the information contained in <code>oClassInfo</code>.
-		 * 
-		 * <code>oClassInfo</code> might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
-		 * @param sClassName Name of the class being created
-		 * @param oClassInfo Object literal with information about the class
-		 * @param FNMetaImpl Constructor function for the metadata object; if not given, it defaults to <code>sap.ui.core.ElementMetadata</code>
-		 * @return Created class / constructor function
-		 */
-		// extend(sClassName:string, oClassInfo?:any, FNMetaImpl?:any): any;
 		/**
 		 * Gets content of aggregation <code>currentLocation</code>.
 		 * 
@@ -336,11 +344,6 @@ declare namespace sap.uxap {
 		 */
 		getLinks(): sap.m.Link[];
 		/**
-		 * Returns a metadata object for class sap.uxap.BreadCrumbs.
-		 * @return Metadata object describing this class
-		 */
-		// getmetadata(): sap.ui.base.Metadata;
-		/**
 		 * Gets current value of property <code>showCurrentLocation</code>.
 		 * 
 		 * Sets the visibility of the current/last element in the BreadCrumbs path.
@@ -355,7 +358,7 @@ declare namespace sap.uxap {
 		 * @param oLink The link whose index is looked for
 		 * @return The index of the provided control in the aggregation if found, or -1 otherwise
 		 */
-		indexOfLink(oLink:sap.m.Link): number;
+		indexOfLink(oLink: sap.m.Link): number;
 		/**
 		 * Inserts a link into the aggregation <code>links</code>.
 		 * @param oLink the link to insert; if empty, nothing is inserted
@@ -365,7 +368,7 @@ declare namespace sap.uxap {
 		 *              the last position
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		insertLink(oLink:sap.m.Link, iIndex:number): BreadCrumbs;
+		insertLink(oLink: sap.m.Link, iIndex: number): BreadCrumbs;
 		/**
 		 * Removes all the controls from the aggregation <code>links</code>.
 		 * 
@@ -378,13 +381,13 @@ declare namespace sap.uxap {
 		 * @param vLink The link to remove or its index or id
 		 * @return The removed link or <code>null</code>
 		 */
-		removeLink(vLink:number|string|sap.m.Link): sap.m.Link;
+		removeLink(vLink: number|string|sap.m.Link): sap.m.Link;
 		/**
 		 * Sets the aggregated <code>currentLocation</code>.
 		 * @param oCurrentLocation The currentLocation to set
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setCurrentLocation(oCurrentLocation:sap.m.Text): BreadCrumbs;
+		setCurrentLocation(oCurrentLocation: sap.m.Text): BreadCrumbs;
 		/**
 		 * Sets a new value for property <code>showCurrentLocation</code>.
 		 * 
@@ -396,10 +399,10 @@ declare namespace sap.uxap {
 		 * @param bShowCurrentLocation New value for property <code>showCurrentLocation</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setShowCurrentLocation(bShowCurrentLocation:boolean): BreadCrumbs;
+		setShowCurrentLocation(bShowCurrentLocation: boolean): BreadCrumbs;
 	}
 
-	class HierarchicalSelect extends sap.m.Select{
+	class HierarchicalSelect extends sap.m.Select {
 		/**
 		 * Constructor for a new HierarchicalSelect.
 		 * 
@@ -410,23 +413,19 @@ declare namespace sap.uxap {
 		 * @param sId id for the new control, generated automatically if no id is given
 		 * @param mSettings initial settings for the new control
 		 */
-		constructor(sId?:string, mSettings?:any);
+		constructor(sId?: string, mSettings?: sap.uxap.HierarchicalSelectMetadata);
 		/**
-		 * Creates a new subclass of class sap.uxap.HierarchicalSelect with name <code>sClassName</code>
-		 * and enriches it with the information contained in <code>oClassInfo</code>.
+		 * Constructor for a new HierarchicalSelect.
 		 * 
-		 * <code>oClassInfo</code> might contain the same kind of information as described in {@link sap.m.Select.extend}.
-		 * @param sClassName Name of the class being created
-		 * @param oClassInfo Object literal with information about the class
-		 * @param FNMetaImpl Constructor function for the metadata object; if not given, it defaults to <code>sap.ui.core.ElementMetadata</code>
-		 * @return Created class / constructor function
+		 * 
+		 * Accepts an object literal <code>mSettings</code> that defines initial
+		 * property values, aggregated and associated objects as well as event handlers.
+		 * See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object.
+		 * @note Any overloads to support not documented metadata
+		 * @param sId id for the new control, generated automatically if no id is given
+		 * @param mSettings initial settings for the new control
 		 */
-		// extend(sClassName:string, oClassInfo?:any, FNMetaImpl?:any): any;
-		/**
-		 * Returns a metadata object for class sap.uxap.HierarchicalSelect.
-		 * @return Metadata object describing this class
-		 */
-		// getmetadata(): sap.ui.base.Metadata;
+		constructor(sId?: string, mSettings?: any);
 		/**
 		 * Gets current value of property <code>upperCase</code>.
 		 * 
@@ -447,7 +446,7 @@ declare namespace sap.uxap {
 		 * @param bUpperCase New value for property <code>upperCase</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setUpperCase(bUpperCase:boolean): HierarchicalSelect;
+		setUpperCase(bUpperCase: boolean): HierarchicalSelect;
 	}
 
 	class Importance {
@@ -465,7 +464,7 @@ declare namespace sap.uxap {
 		static Medium: string;
 	}
 
-	class ModelMapping extends sap.ui.core.Element{
+	class ModelMapping extends sap.ui.core.Element {
 		/**
 		 * Constructor for a new ModelMapping.
 		 * 
@@ -476,18 +475,19 @@ declare namespace sap.uxap {
 		 * @param sId ID for the new control, generated automatically if no ID is given
 		 * @param mSettings Initial settings for the new control
 		 */
-		constructor(sId?:string, mSettings?:any);
+		constructor(sId?: string, mSettings?: sap.uxap.ModelMappingMetadata);
 		/**
-		 * Creates a new subclass of class sap.uxap.ModelMapping with name <code>sClassName</code>
-		 * and enriches it with the information contained in <code>oClassInfo</code>.
+		 * Constructor for a new ModelMapping.
 		 * 
-		 * <code>oClassInfo</code> might contain the same kind of information as described in {@link sap.ui.core.Element.extend}.
-		 * @param sClassName Name of the class being created
-		 * @param oClassInfo Object literal with information about the class
-		 * @param FNMetaImpl Constructor function for the metadata object; if not given, it defaults to <code>sap.ui.core.ElementMetadata</code>
-		 * @return Created class / constructor function
+		 * 
+		 * Accepts an object literal <code>mSettings</code> that defines initial
+		 * property values, aggregated and associated objects as well as event handlers.
+		 * See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object.
+		 * @note Any overloads to support not documented metadata
+		 * @param sId ID for the new control, generated automatically if no ID is given
+		 * @param mSettings Initial settings for the new control
 		 */
-		// extend(sClassName:string, oClassInfo?:any, FNMetaImpl?:any): any;
+		constructor(sId?: string, mSettings?: any);
 		/**
 		 * Gets current value of property <code>externalModelName</code>.
 		 * 
@@ -512,11 +512,6 @@ declare namespace sap.uxap {
 		 */
 		getInternalModelName(): string;
 		/**
-		 * Returns a metadata object for class sap.uxap.ModelMapping.
-		 * @return Metadata object describing this class
-		 */
-		// getmetadata(): sap.ui.base.Metadata;
-		/**
 		 * Sets a new value for property <code>externalModelName</code>.
 		 * 
 		 * Determines the the external model name.
@@ -525,7 +520,7 @@ declare namespace sap.uxap {
 		 * @param sExternalModelName New value for property <code>externalModelName</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setExternalModelName(sExternalModelName:string): ModelMapping;
+		setExternalModelName(sExternalModelName: string): ModelMapping;
 		/**
 		 * Sets a new value for property <code>externalPath</code>.
 		 * 
@@ -535,7 +530,7 @@ declare namespace sap.uxap {
 		 * @param sExternalPath New value for property <code>externalPath</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setExternalPath(sExternalPath:string): ModelMapping;
+		setExternalPath(sExternalPath: string): ModelMapping;
 		/**
 		 * Sets a new value for property <code>internalModelName</code>.
 		 * 
@@ -547,7 +542,7 @@ declare namespace sap.uxap {
 		 * @param sInternalModelName New value for property <code>internalModelName</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setInternalModelName(sInternalModelName:string): ModelMapping;
+		setInternalModelName(sInternalModelName: string): ModelMapping;
 	}
 
 	class ObjectPageConfigurationMode {
@@ -561,7 +556,7 @@ declare namespace sap.uxap {
 		static JsonURL: string;
 	}
 
-	class ObjectPageHeader extends sap.ui.core.Control{
+	class ObjectPageHeader extends sap.ui.core.Control {
 		/**
 		 * Constructor for a new ObjectPageHeader.
 		 * 
@@ -572,19 +567,31 @@ declare namespace sap.uxap {
 		 * @param sId id for the new control, generated automatically if no id is given
 		 * @param mSettings initial settings for the new control
 		 */
-		constructor(sId?:string, mSettings?:any);
+		constructor(sId?: string, mSettings?: sap.uxap.ObjectPageHeaderMetadata);
+		/**
+		 * Constructor for a new ObjectPageHeader.
+		 * 
+		 * 
+		 * Accepts an object literal <code>mSettings</code> that defines initial
+		 * property values, aggregated and associated objects as well as event handlers.
+		 * See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object.
+		 * @note Any overloads to support not documented metadata
+		 * @param sId id for the new control, generated automatically if no id is given
+		 * @param mSettings initial settings for the new control
+		 */
+		constructor(sId?: string, mSettings?: any);
 		/**
 		 * Adds some action to the aggregation <code>actions</code>.
 		 * @param oAction the action to add; if empty, nothing is inserted
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		addAction(oAction:sap.ui.core.Control): ObjectPageHeader;
+		addAction(oAction: sap.ui.core.Control): ObjectPageHeader;
 		/**
 		 * Adds some breadCrumbLink to the aggregation <code>breadCrumbsLinks</code>.
 		 * @param oBreadCrumbLink the breadCrumbLink to add; if empty, nothing is inserted
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		addBreadCrumbLink(oBreadCrumbLink:sap.m.Link): ObjectPageHeader;
+		addBreadCrumbLink(oBreadCrumbLink: sap.m.Link): ObjectPageHeader;
 		/**
 		 * Attaches event handler <code>fnFunction</code> to the <code>markChangesPress</code> event of this <code>sap.uxap.ObjectPageHeader</code>.
 		 * 
@@ -597,7 +604,7 @@ declare namespace sap.uxap {
 		 * @param oListener Context object to call the event handler with. Defaults to this <code>sap.uxap.ObjectPageHeader</code> itself
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		attachMarkChangesPress(fnFunction:any, oData?:any, oListener?:any): ObjectPageHeader;
+		attachMarkChangesPress(fnFunction: any, oData?: any, oListener?: any): ObjectPageHeader;
 		/**
 		 * Attaches event handler <code>fnFunction</code> to the <code>markLockedPress</code> event of this <code>sap.uxap.ObjectPageHeader</code>.
 		 * 
@@ -610,7 +617,7 @@ declare namespace sap.uxap {
 		 * @param oListener Context object to call the event handler with. Defaults to this <code>sap.uxap.ObjectPageHeader</code> itself
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		attachMarkLockedPress(fnFunction:any, oData?:any, oListener?:any): ObjectPageHeader;
+		attachMarkLockedPress(fnFunction: any, oData?: any, oListener?: any): ObjectPageHeader;
 		/**
 		 * Attaches event handler <code>fnFunction</code> to the <code>titleSelectorPress</code> event of this <code>sap.uxap.ObjectPageHeader</code>.
 		 * 
@@ -623,7 +630,7 @@ declare namespace sap.uxap {
 		 * @param oListener Context object to call the event handler with. Defaults to this <code>sap.uxap.ObjectPageHeader</code> itself
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		attachTitleSelectorPress(fnFunction:any, oData?:any, oListener?:any): ObjectPageHeader;
+		attachTitleSelectorPress(fnFunction: any, oData?: any, oListener?: any): ObjectPageHeader;
 		/**
 		 * Destroys all the actions in the aggregation <code>actions</code>.
 		 * @return Reference to <code>this</code> in order to allow method chaining
@@ -652,7 +659,7 @@ declare namespace sap.uxap {
 		 * @param oListener Context object on which the given function had to be called
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		detachMarkChangesPress(fnFunction:any, oListener:any): ObjectPageHeader;
+		detachMarkChangesPress(fnFunction: any, oListener: any): ObjectPageHeader;
 		/**
 		 * Detaches event handler <code>fnFunction</code> from the <code>markLockedPress</code> event of this <code>sap.uxap.ObjectPageHeader</code>.
 		 * 
@@ -661,7 +668,7 @@ declare namespace sap.uxap {
 		 * @param oListener Context object on which the given function had to be called
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		detachMarkLockedPress(fnFunction:any, oListener:any): ObjectPageHeader;
+		detachMarkLockedPress(fnFunction: any, oListener: any): ObjectPageHeader;
 		/**
 		 * Detaches event handler <code>fnFunction</code> from the <code>titleSelectorPress</code> event of this <code>sap.uxap.ObjectPageHeader</code>.
 		 * 
@@ -670,18 +677,7 @@ declare namespace sap.uxap {
 		 * @param oListener Context object on which the given function had to be called
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		detachTitleSelectorPress(fnFunction:any, oListener:any): ObjectPageHeader;
-		/**
-		 * Creates a new subclass of class sap.uxap.ObjectPageHeader with name <code>sClassName</code>
-		 * and enriches it with the information contained in <code>oClassInfo</code>.
-		 * 
-		 * <code>oClassInfo</code> might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
-		 * @param sClassName Name of the class being created
-		 * @param oClassInfo Object literal with information about the class
-		 * @param FNMetaImpl Constructor function for the metadata object; if not given, it defaults to <code>sap.ui.core.ElementMetadata</code>
-		 * @return Created class / constructor function
-		 */
-		// extend(sClassName:string, oClassInfo?:any, FNMetaImpl?:any): any;
+		detachTitleSelectorPress(fnFunction: any, oListener: any): ObjectPageHeader;
 		/**
 		 * Fires event <code>markChangesPress</code> to attached listeners.
 		 * 
@@ -692,7 +688,7 @@ declare namespace sap.uxap {
 		 * @param mArguments The arguments to pass along with the event
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		fireMarkChangesPress(mArguments?:any): ObjectPageHeader;
+		fireMarkChangesPress(mArguments?: any): ObjectPageHeader;
 		/**
 		 * Fires event <code>markLockedPress</code> to attached listeners.
 		 * 
@@ -703,7 +699,7 @@ declare namespace sap.uxap {
 		 * @param mArguments The arguments to pass along with the event
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		fireMarkLockedPress(mArguments?:any): ObjectPageHeader;
+		fireMarkLockedPress(mArguments?: any): ObjectPageHeader;
 		/**
 		 * Fires event <code>titleSelectorPress</code> to attached listeners.
 		 * 
@@ -714,7 +710,7 @@ declare namespace sap.uxap {
 		 * @param mArguments The arguments to pass along with the event
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		fireTitleSelectorPress(mArguments?:any): ObjectPageHeader;
+		fireTitleSelectorPress(mArguments?: any): ObjectPageHeader;
 		/**
 		 * Gets content of aggregation <code>actions</code>.
 		 * 
@@ -805,11 +801,6 @@ declare namespace sap.uxap {
 		 * @return Value of property <code>markLocked</code>
 		 */
 		getMarkLocked(): boolean;
-		/**
-		 * Returns a metadata object for class sap.uxap.ObjectPageHeader.
-		 * @return Metadata object describing this class
-		 */
-		// getmetadata(): sap.ui.base.Metadata;
 		/**
 		 * Gets content of aggregation <code>navigationBar</code>.
 		 * 
@@ -906,14 +897,14 @@ declare namespace sap.uxap {
 		 * @param oAction The action whose index is looked for
 		 * @return The index of the provided control in the aggregation if found, or -1 otherwise
 		 */
-		indexOfAction(oAction:sap.ui.core.Control): number;
+		indexOfAction(oAction: sap.ui.core.Control): number;
 		/**
 		 * Checks for the provided <code>sap.m.Link</code> in the aggregation <code>breadCrumbsLinks</code>.
 		 * and returns its index if found or -1 otherwise.
 		 * @param oBreadCrumbLink The breadCrumbLink whose index is looked for
 		 * @return The index of the provided control in the aggregation if found, or -1 otherwise
 		 */
-		indexOfBreadCrumbLink(oBreadCrumbLink:sap.m.Link): number;
+		indexOfBreadCrumbLink(oBreadCrumbLink: sap.m.Link): number;
 		/**
 		 * Inserts a action into the aggregation <code>actions</code>.
 		 * @param oAction the action to insert; if empty, nothing is inserted
@@ -923,7 +914,7 @@ declare namespace sap.uxap {
 		 *              the last position
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		insertAction(oAction:sap.ui.core.Control, iIndex:number): ObjectPageHeader;
+		insertAction(oAction: sap.ui.core.Control, iIndex: number): ObjectPageHeader;
 		/**
 		 * Inserts a breadCrumbLink into the aggregation <code>breadCrumbsLinks</code>.
 		 * @param oBreadCrumbLink the breadCrumbLink to insert; if empty, nothing is inserted
@@ -933,13 +924,13 @@ declare namespace sap.uxap {
 		 *              the last position
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		insertBreadCrumbLink(oBreadCrumbLink:sap.m.Link, iIndex:number): ObjectPageHeader;
+		insertBreadCrumbLink(oBreadCrumbLink: sap.m.Link, iIndex: number): ObjectPageHeader;
 		/**
 		 * Removes a action from the aggregation <code>actions</code>.
 		 * @param vAction The action to remove or its index or id
 		 * @return The removed action or <code>null</code>
 		 */
-		removeAction(vAction:number|string|sap.ui.core.Control): sap.ui.core.Control;
+		removeAction(vAction: number|string|sap.ui.core.Control): sap.ui.core.Control;
 		/**
 		 * Removes all the controls from the aggregation <code>actions</code>.
 		 * 
@@ -959,7 +950,7 @@ declare namespace sap.uxap {
 		 * @param vBreadCrumbLink The breadCrumbLink to remove or its index or id
 		 * @return The removed breadCrumbLink or <code>null</code>
 		 */
-		removeBreadCrumbLink(vBreadCrumbLink:number|string|sap.m.Link): sap.m.Link;
+		removeBreadCrumbLink(vBreadCrumbLink: number|string|sap.m.Link): sap.m.Link;
 		/**
 		 * Sets a new value for property <code>isActionAreaAlwaysVisible</code>.
 		 * 
@@ -971,7 +962,7 @@ declare namespace sap.uxap {
 		 * @param bIsActionAreaAlwaysVisible New value for property <code>isActionAreaAlwaysVisible</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setIsActionAreaAlwaysVisible(bIsActionAreaAlwaysVisible:boolean): ObjectPageHeader;
+		setIsActionAreaAlwaysVisible(bIsActionAreaAlwaysVisible: boolean): ObjectPageHeader;
 		/**
 		 * Sets a new value for property <code>isObjectIconAlwaysVisible</code>.
 		 * 
@@ -983,7 +974,7 @@ declare namespace sap.uxap {
 		 * @param bIsObjectIconAlwaysVisible New value for property <code>isObjectIconAlwaysVisible</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setIsObjectIconAlwaysVisible(bIsObjectIconAlwaysVisible:boolean): ObjectPageHeader;
+		setIsObjectIconAlwaysVisible(bIsObjectIconAlwaysVisible: boolean): ObjectPageHeader;
 		/**
 		 * Sets a new value for property <code>isObjectSubtitleAlwaysVisible</code>.
 		 * 
@@ -995,7 +986,7 @@ declare namespace sap.uxap {
 		 * @param bIsObjectSubtitleAlwaysVisible New value for property <code>isObjectSubtitleAlwaysVisible</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setIsObjectSubtitleAlwaysVisible(bIsObjectSubtitleAlwaysVisible:boolean): ObjectPageHeader;
+		setIsObjectSubtitleAlwaysVisible(bIsObjectSubtitleAlwaysVisible: boolean): ObjectPageHeader;
 		/**
 		 * Sets a new value for property <code>isObjectTitleAlwaysVisible</code>.
 		 * 
@@ -1007,7 +998,7 @@ declare namespace sap.uxap {
 		 * @param bIsObjectTitleAlwaysVisible New value for property <code>isObjectTitleAlwaysVisible</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setIsObjectTitleAlwaysVisible(bIsObjectTitleAlwaysVisible:boolean): ObjectPageHeader;
+		setIsObjectTitleAlwaysVisible(bIsObjectTitleAlwaysVisible: boolean): ObjectPageHeader;
 		/**
 		 * Sets a new value for property <code>markChanges</code>.
 		 * 
@@ -1021,7 +1012,7 @@ declare namespace sap.uxap {
 		 * @param bMarkChanges New value for property <code>markChanges</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setMarkChanges(bMarkChanges:boolean): ObjectPageHeader;
+		setMarkChanges(bMarkChanges: boolean): ObjectPageHeader;
 		/**
 		 * Sets a new value for property <code>markFavorite</code>.
 		 * 
@@ -1033,7 +1024,7 @@ declare namespace sap.uxap {
 		 * @param bMarkFavorite New value for property <code>markFavorite</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setMarkFavorite(bMarkFavorite:boolean): ObjectPageHeader;
+		setMarkFavorite(bMarkFavorite: boolean): ObjectPageHeader;
 		/**
 		 * Sets a new value for property <code>markFlagged</code>.
 		 * 
@@ -1045,7 +1036,7 @@ declare namespace sap.uxap {
 		 * @param bMarkFlagged New value for property <code>markFlagged</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setMarkFlagged(bMarkFlagged:boolean): ObjectPageHeader;
+		setMarkFlagged(bMarkFlagged: boolean): ObjectPageHeader;
 		/**
 		 * Sets a new value for property <code>markLocked</code>.
 		 * 
@@ -1057,7 +1048,7 @@ declare namespace sap.uxap {
 		 * @param bMarkLocked New value for property <code>markLocked</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setMarkLocked(bMarkLocked:boolean): ObjectPageHeader;
+		setMarkLocked(bMarkLocked: boolean): ObjectPageHeader;
 		/**
 		 * Sets a new value for property <code>objectImageAlt</code>.
 		 * 
@@ -1069,7 +1060,7 @@ declare namespace sap.uxap {
 		 * @param sObjectImageAlt New value for property <code>objectImageAlt</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setObjectImageAlt(sObjectImageAlt:string): ObjectPageHeader;
+		setObjectImageAlt(sObjectImageAlt: string): ObjectPageHeader;
 		/**
 		 * Sets a new value for property <code>objectImageDensityAware</code>.
 		 * 
@@ -1082,7 +1073,7 @@ declare namespace sap.uxap {
 		 * @param bObjectImageDensityAware New value for property <code>objectImageDensityAware</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setObjectImageDensityAware(bObjectImageDensityAware:boolean): ObjectPageHeader;
+		setObjectImageDensityAware(bObjectImageDensityAware: boolean): ObjectPageHeader;
 		/**
 		 * Sets a new value for property <code>objectImageShape</code>.
 		 * 
@@ -1094,7 +1085,7 @@ declare namespace sap.uxap {
 		 * @param sObjectImageShape New value for property <code>objectImageShape</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setObjectImageShape(sObjectImageShape:ObjectPageHeaderPictureShape): ObjectPageHeader;
+		setObjectImageShape(sObjectImageShape: ObjectPageHeaderPictureShape): ObjectPageHeader;
 		/**
 		 * Sets a new value for property <code>objectImageURI</code>.
 		 * 
@@ -1104,7 +1095,7 @@ declare namespace sap.uxap {
 		 * @param sObjectImageURI New value for property <code>objectImageURI</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setObjectImageURI(sObjectImageURI:string): ObjectPageHeader;
+		setObjectImageURI(sObjectImageURI: string): ObjectPageHeader;
 		/**
 		 * Sets a new value for property <code>objectSubtitle</code>.
 		 * 
@@ -1114,7 +1105,7 @@ declare namespace sap.uxap {
 		 * @param sObjectSubtitle New value for property <code>objectSubtitle</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setObjectSubtitle(sObjectSubtitle:string): ObjectPageHeader;
+		setObjectSubtitle(sObjectSubtitle: string): ObjectPageHeader;
 		/**
 		 * Sets a new value for property <code>showMarkers</code>.
 		 * 
@@ -1126,7 +1117,7 @@ declare namespace sap.uxap {
 		 * @param bShowMarkers New value for property <code>showMarkers</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setShowMarkers(bShowMarkers:boolean): ObjectPageHeader;
+		setShowMarkers(bShowMarkers: boolean): ObjectPageHeader;
 		/**
 		 * Sets a new value for property <code>showPlaceholder</code>.
 		 * 
@@ -1138,7 +1129,7 @@ declare namespace sap.uxap {
 		 * @param bShowPlaceholder New value for property <code>showPlaceholder</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setShowPlaceholder(bShowPlaceholder:boolean): ObjectPageHeader;
+		setShowPlaceholder(bShowPlaceholder: boolean): ObjectPageHeader;
 		/**
 		 * Sets a new value for property <code>showTitleSelector</code>.
 		 * 
@@ -1150,16 +1141,16 @@ declare namespace sap.uxap {
 		 * @param bShowTitleSelector New value for property <code>showTitleSelector</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setShowTitleSelector(bShowTitleSelector:boolean): ObjectPageHeader;
+		setShowTitleSelector(bShowTitleSelector: boolean): ObjectPageHeader;
 		/**
 		 * Sets the aggregated <code>sideContentButton</code>.
 		 * @param oSideContentButton The sideContentButton to set
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setSideContentButton(oSideContentButton:sap.m.Button): ObjectPageHeader;
+		setSideContentButton(oSideContentButton: sap.m.Button): ObjectPageHeader;
 	}
 
-	class ObjectPageHeaderActionButton extends sap.m.Button{
+	class ObjectPageHeaderActionButton extends sap.m.Button {
 		/**
 		 * Constructor for a new ObjectPageHeaderActionButton.
 		 * 
@@ -1170,18 +1161,19 @@ declare namespace sap.uxap {
 		 * @param sId id for the new control, generated automatically if no id is given
 		 * @param mSettings initial settings for the new control
 		 */
-		constructor(sId?:string, mSettings?:any);
+		constructor(sId?: string, mSettings?: sap.uxap.ObjectPageHeaderActionButtonMetadata);
 		/**
-		 * Creates a new subclass of class sap.uxap.ObjectPageHeaderActionButton with name <code>sClassName</code>
-		 * and enriches it with the information contained in <code>oClassInfo</code>.
+		 * Constructor for a new ObjectPageHeaderActionButton.
 		 * 
-		 * <code>oClassInfo</code> might contain the same kind of information as described in {@link sap.m.Button.extend}.
-		 * @param sClassName Name of the class being created
-		 * @param oClassInfo Object literal with information about the class
-		 * @param FNMetaImpl Constructor function for the metadata object; if not given, it defaults to <code>sap.ui.core.ElementMetadata</code>
-		 * @return Created class / constructor function
+		 * 
+		 * Accepts an object literal <code>mSettings</code> that defines initial
+		 * property values, aggregated and associated objects as well as event handlers.
+		 * See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object.
+		 * @note Any overloads to support not documented metadata
+		 * @param sId id for the new control, generated automatically if no id is given
+		 * @param mSettings initial settings for the new control
 		 */
-		// extend(sClassName:string, oClassInfo?:any, FNMetaImpl?:any): any;
+		constructor(sId?: string, mSettings?: any);
 		/**
 		 * Gets current value of property <code>hideIcon</code>.
 		 * 
@@ -1212,11 +1204,6 @@ declare namespace sap.uxap {
 		 */
 		getImportance(): Importance;
 		/**
-		 * Returns a metadata object for class sap.uxap.ObjectPageHeaderActionButton.
-		 * @return Metadata object describing this class
-		 */
-		// getmetadata(): sap.ui.base.Metadata;
-		/**
 		 * Sets a new value for property <code>hideIcon</code>.
 		 * 
 		 * Hide the button icon when rendered into the headerTitle part of the ObjectPageLayout.
@@ -1228,7 +1215,7 @@ declare namespace sap.uxap {
 		 * @param bHideIcon New value for property <code>hideIcon</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setHideIcon(bHideIcon:boolean): ObjectPageHeaderActionButton;
+		setHideIcon(bHideIcon: boolean): ObjectPageHeaderActionButton;
 		/**
 		 * Sets a new value for property <code>hideText</code>.
 		 * 
@@ -1241,7 +1228,7 @@ declare namespace sap.uxap {
 		 * @param bHideText New value for property <code>hideText</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setHideText(bHideText:boolean): ObjectPageHeaderActionButton;
+		setHideText(bHideText: boolean): ObjectPageHeaderActionButton;
 		/**
 		 * Sets a new value for property <code>importance</code>.
 		 * 
@@ -1253,10 +1240,10 @@ declare namespace sap.uxap {
 		 * @param sImportance New value for property <code>importance</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setImportance(sImportance:Importance): ObjectPageHeaderActionButton;
+		setImportance(sImportance: Importance): ObjectPageHeaderActionButton;
 	}
 
-	class ObjectPageHeaderContent extends sap.ui.core.Control{
+	class ObjectPageHeaderContent extends sap.ui.core.Control {
 		/**
 		 * Constructor for a new ObjectPageHeaderContent.
 		 * 
@@ -1267,29 +1254,30 @@ declare namespace sap.uxap {
 		 * @param sId id for the new control, generated automatically if no id is given
 		 * @param mSettings initial settings for the new control
 		 */
-		constructor(sId?:string, mSettings?:any);
+		constructor(sId?: string, mSettings?: sap.uxap.ObjectPageHeaderContentMetadata);
+		/**
+		 * Constructor for a new ObjectPageHeaderContent.
+		 * 
+		 * 
+		 * Accepts an object literal <code>mSettings</code> that defines initial
+		 * property values, aggregated and associated objects as well as event handlers.
+		 * See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object.
+		 * @note Any overloads to support not documented metadata
+		 * @param sId id for the new control, generated automatically if no id is given
+		 * @param mSettings initial settings for the new control
+		 */
+		constructor(sId?: string, mSettings?: any);
 		/**
 		 * Adds some content to the aggregation <code>content</code>.
 		 * @param oContent the content to add; if empty, nothing is inserted
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		addContent(oContent:sap.ui.core.Control): ObjectPageHeaderContent;
+		addContent(oContent: sap.ui.core.Control): ObjectPageHeaderContent;
 		/**
 		 * Destroys all the content in the aggregation <code>content</code>.
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
 		destroyContent(): ObjectPageHeaderContent;
-		/**
-		 * Creates a new subclass of class sap.uxap.ObjectPageHeaderContent with name <code>sClassName</code>
-		 * and enriches it with the information contained in <code>oClassInfo</code>.
-		 * 
-		 * <code>oClassInfo</code> might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
-		 * @param sClassName Name of the class being created
-		 * @param oClassInfo Object literal with information about the class
-		 * @param FNMetaImpl Constructor function for the metadata object; if not given, it defaults to <code>sap.ui.core.ElementMetadata</code>
-		 * @return Created class / constructor function
-		 */
-		// extend(sClassName:string, oClassInfo?:any, FNMetaImpl?:any): any;
 		/**
 		 * Gets content of aggregation <code>content</code>.
 		 * 
@@ -1298,17 +1286,12 @@ declare namespace sap.uxap {
 		 */
 		getContent(): sap.ui.core.Control[];
 		/**
-		 * Returns a metadata object for class sap.uxap.ObjectPageHeaderContent.
-		 * @return Metadata object describing this class
-		 */
-		// getmetadata(): sap.ui.base.Metadata;
-		/**
 		 * Checks for the provided <code>sap.ui.core.Control</code> in the aggregation <code>content</code>.
 		 * and returns its index if found or -1 otherwise.
 		 * @param oContent The content whose index is looked for
 		 * @return The index of the provided control in the aggregation if found, or -1 otherwise
 		 */
-		indexOfContent(oContent:sap.ui.core.Control): number;
+		indexOfContent(oContent: sap.ui.core.Control): number;
 		/**
 		 * Inserts a content into the aggregation <code>content</code>.
 		 * @param oContent the content to insert; if empty, nothing is inserted
@@ -1318,7 +1301,7 @@ declare namespace sap.uxap {
 		 *              the last position
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		insertContent(oContent:sap.ui.core.Control, iIndex:number): ObjectPageHeaderContent;
+		insertContent(oContent: sap.ui.core.Control, iIndex: number): ObjectPageHeaderContent;
 		/**
 		 * Removes all the controls from the aggregation <code>content</code>.
 		 * 
@@ -1331,7 +1314,7 @@ declare namespace sap.uxap {
 		 * @param vContent The content to remove or its index or id
 		 * @return The removed content or <code>null</code>
 		 */
-		removeContent(vContent:number|string|sap.ui.core.Control): sap.ui.core.Control;
+		removeContent(vContent: number|string|sap.ui.core.Control): sap.ui.core.Control;
 	}
 
 	class ObjectPageHeaderDesign {
@@ -1345,7 +1328,7 @@ declare namespace sap.uxap {
 		static Light: string;
 	}
 
-	class ObjectPageHeaderLayoutData extends sap.ui.core.LayoutData{
+	class ObjectPageHeaderLayoutData extends sap.ui.core.LayoutData {
 		/**
 		 * Constructor for a new ObjectPageHeaderLayoutData.
 		 * 
@@ -1356,23 +1339,19 @@ declare namespace sap.uxap {
 		 * @param sId id for the new control, generated automatically if no id is given
 		 * @param mSettings initial settings for the new control
 		 */
-		constructor(sId?:string, mSettings?:any);
+		constructor(sId?: string, mSettings?: sap.uxap.ObjectPageHeaderLayoutDataMetadata);
 		/**
-		 * Creates a new subclass of class sap.uxap.ObjectPageHeaderLayoutData with name <code>sClassName</code>
-		 * and enriches it with the information contained in <code>oClassInfo</code>.
+		 * Constructor for a new ObjectPageHeaderLayoutData.
 		 * 
-		 * <code>oClassInfo</code> might contain the same kind of information as described in {@link sap.ui.core.LayoutData.extend}.
-		 * @param sClassName Name of the class being created
-		 * @param oClassInfo Object literal with information about the class
-		 * @param FNMetaImpl Constructor function for the metadata object; if not given, it defaults to <code>sap.ui.core.ElementMetadata</code>
-		 * @return Created class / constructor function
+		 * 
+		 * Accepts an object literal <code>mSettings</code> that defines initial
+		 * property values, aggregated and associated objects as well as event handlers.
+		 * See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object.
+		 * @note Any overloads to support not documented metadata
+		 * @param sId id for the new control, generated automatically if no id is given
+		 * @param mSettings initial settings for the new control
 		 */
-		// extend(sClassName:string, oClassInfo?:any, FNMetaImpl?:any): any;
-		/**
-		 * Returns a metadata object for class sap.uxap.ObjectPageHeaderLayoutData.
-		 * @return Metadata object describing this class
-		 */
-		// getmetadata(): sap.ui.base.Metadata;
+		constructor(sId?: string, mSettings?: any);
 		/**
 		 * Gets current value of property <code>showSeparatorAfter</code>.
 		 * 
@@ -1438,7 +1417,7 @@ declare namespace sap.uxap {
 		 * @param bShowSeparatorAfter New value for property <code>showSeparatorAfter</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setShowSeparatorAfter(bShowSeparatorAfter:boolean): ObjectPageHeaderLayoutData;
+		setShowSeparatorAfter(bShowSeparatorAfter: boolean): ObjectPageHeaderLayoutData;
 		/**
 		 * Sets a new value for property <code>showSeparatorBefore</code>.
 		 * 
@@ -1450,7 +1429,7 @@ declare namespace sap.uxap {
 		 * @param bShowSeparatorBefore New value for property <code>showSeparatorBefore</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setShowSeparatorBefore(bShowSeparatorBefore:boolean): ObjectPageHeaderLayoutData;
+		setShowSeparatorBefore(bShowSeparatorBefore: boolean): ObjectPageHeaderLayoutData;
 		/**
 		 * Sets a new value for property <code>visibleL</code>.
 		 * 
@@ -1462,7 +1441,7 @@ declare namespace sap.uxap {
 		 * @param bVisibleL New value for property <code>visibleL</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setVisibleL(bVisibleL:boolean): ObjectPageHeaderLayoutData;
+		setVisibleL(bVisibleL: boolean): ObjectPageHeaderLayoutData;
 		/**
 		 * Sets a new value for property <code>visibleM</code>.
 		 * 
@@ -1474,7 +1453,7 @@ declare namespace sap.uxap {
 		 * @param bVisibleM New value for property <code>visibleM</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setVisibleM(bVisibleM:boolean): ObjectPageHeaderLayoutData;
+		setVisibleM(bVisibleM: boolean): ObjectPageHeaderLayoutData;
 		/**
 		 * Sets a new value for property <code>visibleS</code>.
 		 * 
@@ -1486,7 +1465,7 @@ declare namespace sap.uxap {
 		 * @param bVisibleS New value for property <code>visibleS</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setVisibleS(bVisibleS:boolean): ObjectPageHeaderLayoutData;
+		setVisibleS(bVisibleS: boolean): ObjectPageHeaderLayoutData;
 		/**
 		 * Sets a new value for property <code>width</code>.
 		 * 
@@ -1498,7 +1477,7 @@ declare namespace sap.uxap {
 		 * @param sWidth New value for property <code>width</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setWidth(sWidth:sap.ui.core.CSSSize): ObjectPageHeaderLayoutData;
+		setWidth(sWidth: sap.ui.core.CSSSize): ObjectPageHeaderLayoutData;
 	}
 
 	class ObjectPageHeaderPictureShape {
@@ -1512,7 +1491,7 @@ declare namespace sap.uxap {
 		static Square: string;
 	}
 
-	class ObjectPageLayout extends sap.ui.core.Control{
+	class ObjectPageLayout extends sap.ui.core.Control {
 		/**
 		 * Constructor for a new ObjectPageLayout.
 		 * 
@@ -1523,19 +1502,31 @@ declare namespace sap.uxap {
 		 * @param sId id for the new control, generated automatically if no id is given
 		 * @param mSettings initial settings for the new control
 		 */
-		constructor(sId?:string, mSettings?:any);
+		constructor(sId?: string, mSettings?: sap.uxap.ObjectPageLayoutMetadata);
+		/**
+		 * Constructor for a new ObjectPageLayout.
+		 * 
+		 * 
+		 * Accepts an object literal <code>mSettings</code> that defines initial
+		 * property values, aggregated and associated objects as well as event handlers.
+		 * See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object.
+		 * @note Any overloads to support not documented metadata
+		 * @param sId id for the new control, generated automatically if no id is given
+		 * @param mSettings initial settings for the new control
+		 */
+		constructor(sId?: string, mSettings?: any);
 		/**
 		 * Adds some headerContent to the aggregation <code>headerContent</code>.
 		 * @param oHeaderContent the headerContent to add; if empty, nothing is inserted
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		addHeaderContent(oHeaderContent:sap.ui.core.Control): ObjectPageLayout;
+		addHeaderContent(oHeaderContent: sap.ui.core.Control): ObjectPageLayout;
 		/**
 		 * Adds some section to the aggregation <code>sections</code>.
 		 * @param oSection the section to add; if empty, nothing is inserted
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		addSection(oSection:ObjectPageSection): ObjectPageLayout;
+		addSection(oSection: ObjectPageSection): ObjectPageLayout;
 		/**
 		 * Attaches event handler <code>fnFunction</code> to the <code>editHeaderButtonPress</code> event of this <code>sap.uxap.ObjectPageLayout</code>.
 		 * 
@@ -1548,7 +1539,7 @@ declare namespace sap.uxap {
 		 * @param oListener Context object to call the event handler with. Defaults to this <code>sap.uxap.ObjectPageLayout</code> itself
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		attachEditHeaderButtonPress(fnFunction:any, oData?:any, oListener?:any): ObjectPageLayout;
+		attachEditHeaderButtonPress(fnFunction: any, oData?: any, oListener?: any): ObjectPageLayout;
 		/**
 		 * Attaches event handler <code>fnFunction</code> to the <code>navigate</code> event of this <code>sap.uxap.ObjectPageLayout</code>.
 		 * 
@@ -1561,7 +1552,7 @@ declare namespace sap.uxap {
 		 * @param oListener Context object to call the event handler with. Defaults to this <code>sap.uxap.ObjectPageLayout</code> itself
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		attachNavigate(fnFunction:any, oData?:any, oListener?:any): ObjectPageLayout;
+		attachNavigate(fnFunction: any, oData?: any, oListener?: any): ObjectPageLayout;
 		/**
 		 * Attaches event handler <code>fnFunction</code> to the <code>toggleAnchorBar</code> event of this <code>sap.uxap.ObjectPageLayout</code>.
 		 * 
@@ -1574,7 +1565,7 @@ declare namespace sap.uxap {
 		 * @param oListener Context object to call the event handler with. Defaults to this <code>sap.uxap.ObjectPageLayout</code> itself
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		attachToggleAnchorBar(fnFunction:any, oData?:any, oListener?:any): ObjectPageLayout;
+		attachToggleAnchorBar(fnFunction: any, oData?: any, oListener?: any): ObjectPageLayout;
 		/**
 		 * Destroys the footer in the aggregation <code>footer</code>.
 		 * @return Reference to <code>this</code> in order to allow method chaining
@@ -1603,7 +1594,7 @@ declare namespace sap.uxap {
 		 * @param oListener Context object on which the given function had to be called
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		detachEditHeaderButtonPress(fnFunction:any, oListener:any): ObjectPageLayout;
+		detachEditHeaderButtonPress(fnFunction: any, oListener: any): ObjectPageLayout;
 		/**
 		 * Detaches event handler <code>fnFunction</code> from the <code>navigate</code> event of this <code>sap.uxap.ObjectPageLayout</code>.
 		 * 
@@ -1612,7 +1603,7 @@ declare namespace sap.uxap {
 		 * @param oListener Context object on which the given function had to be called
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		detachNavigate(fnFunction:any, oListener:any): ObjectPageLayout;
+		detachNavigate(fnFunction: any, oListener: any): ObjectPageLayout;
 		/**
 		 * Detaches event handler <code>fnFunction</code> from the <code>toggleAnchorBar</code> event of this <code>sap.uxap.ObjectPageLayout</code>.
 		 * 
@@ -1621,24 +1612,13 @@ declare namespace sap.uxap {
 		 * @param oListener Context object on which the given function had to be called
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		detachToggleAnchorBar(fnFunction:any, oListener:any): ObjectPageLayout;
-		/**
-		 * Creates a new subclass of class sap.uxap.ObjectPageLayout with name <code>sClassName</code>
-		 * and enriches it with the information contained in <code>oClassInfo</code>.
-		 * 
-		 * <code>oClassInfo</code> might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
-		 * @param sClassName Name of the class being created
-		 * @param oClassInfo Object literal with information about the class
-		 * @param FNMetaImpl Constructor function for the metadata object; if not given, it defaults to <code>sap.ui.core.ElementMetadata</code>
-		 * @return Created class / constructor function
-		 */
-		// extend(sClassName:string, oClassInfo?:any, FNMetaImpl?:any): any;
+		detachToggleAnchorBar(fnFunction: any, oListener: any): ObjectPageLayout;
 		/**
 		 * Fires event <code>editHeaderButtonPress</code> to attached listeners.
 		 * @param mArguments The arguments to pass along with the event
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		fireEditHeaderButtonPress(mArguments?:any): ObjectPageLayout;
+		fireEditHeaderButtonPress(mArguments?: any): ObjectPageLayout;
 		/**
 		 * Fires event <code>navigate</code> to attached listeners.
 		 * 
@@ -1649,7 +1629,7 @@ declare namespace sap.uxap {
 		 * @param mArguments The arguments to pass along with the event
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		fireNavigate(mArguments?:any): ObjectPageLayout;
+		fireNavigate(mArguments?: any): ObjectPageLayout;
 		/**
 		 * Fires event <code>toggleAnchorBar</code> to attached listeners.
 		 * 
@@ -1660,7 +1640,7 @@ declare namespace sap.uxap {
 		 * @param mArguments The arguments to pass along with the event
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		fireToggleAnchorBar(mArguments?:any): ObjectPageLayout;
+		fireToggleAnchorBar(mArguments?: any): ObjectPageLayout;
 		/**
 		 * Gets current value of property <code>alwaysShowContentHeader</code>.
 		 * 
@@ -1722,11 +1702,6 @@ declare namespace sap.uxap {
 		 * @return Value of property <code>isChildPage</code>
 		 */
 		getIsChildPage(): boolean;
-		/**
-		 * Returns a metadata object for class sap.uxap.ObjectPageLayout.
-		 * @return Metadata object describing this class
-		 */
-		// getmetadata(): sap.ui.base.Metadata;
 		/**
 		 * Returns a sap.ui.core.delegate.ScrollEnablement object used to handle scrolling
 		 * @return 
@@ -1849,14 +1824,14 @@ declare namespace sap.uxap {
 		 * @param oHeaderContent The headerContent whose index is looked for
 		 * @return The index of the provided control in the aggregation if found, or -1 otherwise
 		 */
-		indexOfHeaderContent(oHeaderContent:sap.ui.core.Control): number;
+		indexOfHeaderContent(oHeaderContent: sap.ui.core.Control): number;
 		/**
 		 * Checks for the provided <code>sap.uxap.ObjectPageSection</code> in the aggregation <code>sections</code>.
 		 * and returns its index if found or -1 otherwise.
 		 * @param oSection The section whose index is looked for
 		 * @return The index of the provided control in the aggregation if found, or -1 otherwise
 		 */
-		indexOfSection(oSection:ObjectPageSection): number;
+		indexOfSection(oSection: ObjectPageSection): number;
 		/**
 		 * Inserts a headerContent into the aggregation <code>headerContent</code>.
 		 * @param oHeaderContent the headerContent to insert; if empty, nothing is inserted
@@ -1866,7 +1841,7 @@ declare namespace sap.uxap {
 		 *              the last position
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		insertHeaderContent(oHeaderContent:sap.ui.core.Control, iIndex:number): ObjectPageLayout;
+		insertHeaderContent(oHeaderContent: sap.ui.core.Control, iIndex: number): ObjectPageLayout;
 		/**
 		 * Inserts a section into the aggregation <code>sections</code>.
 		 * @param oSection the section to insert; if empty, nothing is inserted
@@ -1876,7 +1851,7 @@ declare namespace sap.uxap {
 		 *              the last position
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		insertSection(oSection:ObjectPageSection, iIndex:number): ObjectPageLayout;
+		insertSection(oSection: ObjectPageSection, iIndex: number): ObjectPageLayout;
 		/**
 		 * Removes all the controls from the aggregation <code>headerContent</code>.
 		 * 
@@ -1896,20 +1871,20 @@ declare namespace sap.uxap {
 		 * @param vHeaderContent The headerContent to remove or its index or id
 		 * @return The removed headerContent or <code>null</code>
 		 */
-		removeHeaderContent(vHeaderContent:number|string|sap.ui.core.Control): sap.ui.core.Control;
+		removeHeaderContent(vHeaderContent: number|string|sap.ui.core.Control): sap.ui.core.Control;
 		/**
 		 * Removes a section from the aggregation <code>sections</code>.
 		 * @param vSection The section to remove or its index or id
 		 * @return The removed section or <code>null</code>
 		 */
-		removeSection(vSection:number|string|ObjectPageSection): ObjectPageSection;
+		removeSection(vSection: number|string|ObjectPageSection): ObjectPageSection;
 		/**
 		 * Scrolls the Object page to the given Section.
 		 * @param sId The Section ID to scroll to
 		 * @param iDuration Scroll duration (in ms). Default value is 0
 		 * @param iOffset Additional pixels to scroll
 		 */
-		scrollToSection(sId:string, iDuration:number, iOffset:number);
+		scrollToSection(sId: string, iDuration: number, iOffset: number);
 		/**
 		 * Sets a new value for property <code>alwaysShowContentHeader</code>.
 		 * 
@@ -1921,13 +1896,20 @@ declare namespace sap.uxap {
 		 * @param bAlwaysShowContentHeader New value for property <code>alwaysShowContentHeader</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setAlwaysShowContentHeader(bAlwaysShowContentHeader:boolean): ObjectPageLayout;
+		setAlwaysShowContentHeader(bAlwaysShowContentHeader: boolean): ObjectPageLayout;
 		/**
 		 * Overwrite setBusy, because the busyIndicator does not cover the header title,
 		 * because the header title has z-index: 2 in order to appear on top of the content
 		 * @param bBusy 
 		 */
-		setBusy(bBusy:boolean);
+		setBusy(bBusy: boolean);
+		/**
+		 * Set the controls busy state.
+		 * @note Overload from base type sap.ui.core.Control
+		 * @param bBusy The new busy state to be set
+		 * @return <code>this</code> to allow method chaining
+		 */
+		setBusy(bBusy: boolean): sap.ui.core.Control;
 		/**
 		 * Sets a new value for property <code>enableLazyLoading</code>.
 		 * 
@@ -1939,7 +1921,7 @@ declare namespace sap.uxap {
 		 * @param bEnableLazyLoading New value for property <code>enableLazyLoading</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setEnableLazyLoading(bEnableLazyLoading:boolean): ObjectPageLayout;
+		setEnableLazyLoading(bEnableLazyLoading: boolean): ObjectPageLayout;
 		/**
 		 * Sets a new value for property <code>flexEnabled</code>.
 		 * 
@@ -1952,19 +1934,19 @@ declare namespace sap.uxap {
 		 * @param bFlexEnabled New value for property <code>flexEnabled</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setFlexEnabled(bFlexEnabled:boolean): ObjectPageLayout;
+		setFlexEnabled(bFlexEnabled: boolean): ObjectPageLayout;
 		/**
 		 * Sets the aggregated <code>footer</code>.
 		 * @param oFooter The footer to set
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setFooter(oFooter:sap.m.IBar): ObjectPageLayout;
+		setFooter(oFooter: sap.m.IBar): ObjectPageLayout;
 		/**
 		 * Sets the aggregated <code>headerTitle</code>.
 		 * @param oHeaderTitle The headerTitle to set
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setHeaderTitle(oHeaderTitle:ObjectPageHeader): ObjectPageLayout;
+		setHeaderTitle(oHeaderTitle: ObjectPageHeader): ObjectPageLayout;
 		/**
 		 * Sets a new value for property <code>height</code>.
 		 * 
@@ -1976,7 +1958,7 @@ declare namespace sap.uxap {
 		 * @param sHeight New value for property <code>height</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setHeight(sHeight:sap.ui.core.CSSSize): ObjectPageLayout;
+		setHeight(sHeight: sap.ui.core.CSSSize): ObjectPageLayout;
 		/**
 		 * Sets a new value for property <code>isChildPage</code>.
 		 * 
@@ -1989,7 +1971,7 @@ declare namespace sap.uxap {
 		 * @param bIsChildPage New value for property <code>isChildPage</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setIsChildPage(bIsChildPage:boolean): ObjectPageLayout;
+		setIsChildPage(bIsChildPage: boolean): ObjectPageLayout;
 		/**
 		 * Sets a new value for property <code>showAnchorBar</code>.
 		 * 
@@ -2001,7 +1983,7 @@ declare namespace sap.uxap {
 		 * @param bShowAnchorBar New value for property <code>showAnchorBar</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setShowAnchorBar(bShowAnchorBar:boolean): ObjectPageLayout;
+		setShowAnchorBar(bShowAnchorBar: boolean): ObjectPageLayout;
 		/**
 		 * Sets a new value for property <code>showAnchorBarPopover</code>.
 		 * 
@@ -2013,7 +1995,7 @@ declare namespace sap.uxap {
 		 * @param bShowAnchorBarPopover New value for property <code>showAnchorBarPopover</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setShowAnchorBarPopover(bShowAnchorBarPopover:boolean): ObjectPageLayout;
+		setShowAnchorBarPopover(bShowAnchorBarPopover: boolean): ObjectPageLayout;
 		/**
 		 * Sets a new value for property <code>showEditHeaderButton</code>.
 		 * 
@@ -2025,7 +2007,7 @@ declare namespace sap.uxap {
 		 * @param bShowEditHeaderButton New value for property <code>showEditHeaderButton</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setShowEditHeaderButton(bShowEditHeaderButton:boolean): ObjectPageLayout;
+		setShowEditHeaderButton(bShowEditHeaderButton: boolean): ObjectPageLayout;
 		/**
 		 * Sets a new value for property <code>showFooter</code>.
 		 * 
@@ -2037,7 +2019,7 @@ declare namespace sap.uxap {
 		 * @param bShowFooter New value for property <code>showFooter</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setShowFooter(bShowFooter:boolean): ObjectPageLayout;
+		setShowFooter(bShowFooter: boolean): ObjectPageLayout;
 		/**
 		 * Sets a new value for property <code>showOnlyHighImportance</code>.
 		 * 
@@ -2049,7 +2031,7 @@ declare namespace sap.uxap {
 		 * @param bShowOnlyHighImportance New value for property <code>showOnlyHighImportance</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setShowOnlyHighImportance(bShowOnlyHighImportance:boolean): ObjectPageLayout;
+		setShowOnlyHighImportance(bShowOnlyHighImportance: boolean): ObjectPageLayout;
 		/**
 		 * Sets a new value for property <code>showTitleInHeaderContent</code>.
 		 * 
@@ -2061,7 +2043,7 @@ declare namespace sap.uxap {
 		 * @param bShowTitleInHeaderContent New value for property <code>showTitleInHeaderContent</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setShowTitleInHeaderContent(bShowTitleInHeaderContent:boolean): ObjectPageLayout;
+		setShowTitleInHeaderContent(bShowTitleInHeaderContent: boolean): ObjectPageLayout;
 		/**
 		 * Sets a new value for property <code>subSectionLayout</code>.
 		 * 
@@ -2073,7 +2055,7 @@ declare namespace sap.uxap {
 		 * @param sSubSectionLayout New value for property <code>subSectionLayout</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setSubSectionLayout(sSubSectionLayout:ObjectPageSubSectionLayout): ObjectPageLayout;
+		setSubSectionLayout(sSubSectionLayout: ObjectPageSubSectionLayout): ObjectPageLayout;
 		/**
 		 * Sets a new value for property <code>upperCaseAnchorBar</code>.
 		 * 
@@ -2085,7 +2067,7 @@ declare namespace sap.uxap {
 		 * @param bUpperCaseAnchorBar New value for property <code>upperCaseAnchorBar</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setUpperCaseAnchorBar(bUpperCaseAnchorBar:boolean): ObjectPageLayout;
+		setUpperCaseAnchorBar(bUpperCaseAnchorBar: boolean): ObjectPageLayout;
 		/**
 		 * Sets a new value for property <code>useTwoColumnsForLargeScreen</code>.
 		 * 
@@ -2097,10 +2079,10 @@ declare namespace sap.uxap {
 		 * @param bUseTwoColumnsForLargeScreen New value for property <code>useTwoColumnsForLargeScreen</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setUseTwoColumnsForLargeScreen(bUseTwoColumnsForLargeScreen:boolean): ObjectPageLayout;
+		setUseTwoColumnsForLargeScreen(bUseTwoColumnsForLargeScreen: boolean): ObjectPageLayout;
 	}
 
-	class ObjectPageLazyLoader extends sap.ui.core.Control{
+	class ObjectPageLazyLoader extends sap.ui.core.Control {
 		/**
 		 * Constructor for a new ObjectPageLazyLoader.
 		 * 
@@ -2111,29 +2093,18 @@ declare namespace sap.uxap {
 		 * @param sId ID for the new control, generated automatically if no ID is given
 		 * @param mSettings initial settings for the new control
 		 */
-		constructor(sId?:string, mSettings?:any);
+		constructor(sId?: string, mSettings?: any);
 		/**
 		 * Adds some content to the aggregation <code>content</code>.
 		 * @param oContent the content to add; if empty, nothing is inserted
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		addContent(oContent:sap.ui.core.Control): ObjectPageLazyLoader;
+		addContent(oContent: sap.ui.core.Control): ObjectPageLazyLoader;
 		/**
 		 * Destroys all the content in the aggregation <code>content</code>.
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
 		destroyContent(): ObjectPageLazyLoader;
-		/**
-		 * Creates a new subclass of class sap.uxap.ObjectPageLazyLoader with name <code>sClassName</code>
-		 * and enriches it with the information contained in <code>oClassInfo</code>.
-		 * 
-		 * <code>oClassInfo</code> might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
-		 * @param sClassName Name of the class being created
-		 * @param oClassInfo Object literal with information about the class
-		 * @param FNMetaImpl Constructor function for the metadata object; if not given, it defaults to <code>sap.ui.core.ElementMetadata</code>
-		 * @return Created class / constructor function
-		 */
-		// extend(sClassName:string, oClassInfo?:any, FNMetaImpl?:any): any;
 		/**
 		 * Gets content of aggregation <code>content</code>.
 		 * 
@@ -2142,17 +2113,12 @@ declare namespace sap.uxap {
 		 */
 		getContent(): sap.ui.core.Control[];
 		/**
-		 * Returns a metadata object for class sap.uxap.ObjectPageLazyLoader.
-		 * @return Metadata object describing this class
-		 */
-		// getmetadata(): sap.ui.base.Metadata;
-		/**
 		 * Checks for the provided <code>sap.ui.core.Control</code> in the aggregation <code>content</code>.
 		 * and returns its index if found or -1 otherwise.
 		 * @param oContent The content whose index is looked for
 		 * @return The index of the provided control in the aggregation if found, or -1 otherwise
 		 */
-		indexOfContent(oContent:sap.ui.core.Control): number;
+		indexOfContent(oContent: sap.ui.core.Control): number;
 		/**
 		 * Inserts a content into the aggregation <code>content</code>.
 		 * @param oContent the content to insert; if empty, nothing is inserted
@@ -2162,7 +2128,7 @@ declare namespace sap.uxap {
 		 *              the last position
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		insertContent(oContent:sap.ui.core.Control, iIndex:number): ObjectPageLazyLoader;
+		insertContent(oContent: sap.ui.core.Control, iIndex: number): ObjectPageLazyLoader;
 		/**
 		 * Removes all the controls from the aggregation <code>content</code>.
 		 * 
@@ -2175,10 +2141,10 @@ declare namespace sap.uxap {
 		 * @param vContent The content to remove or its index or id
 		 * @return The removed content or <code>null</code>
 		 */
-		removeContent(vContent:number|string|sap.ui.core.Control): sap.ui.core.Control;
+		removeContent(vContent: number|string|sap.ui.core.Control): sap.ui.core.Control;
 	}
 
-	class ObjectPageSection extends ObjectPageSectionBase{
+	class ObjectPageSection extends ObjectPageSectionBase {
 		/**
 		 * Constructor for a new ObjectPageSection.
 		 * 
@@ -2189,34 +2155,30 @@ declare namespace sap.uxap {
 		 * @param sId id for the new control, generated automatically if no id is given
 		 * @param mSettings initial settings for the new control
 		 */
-		constructor(sId?:string, mSettings?:any);
+		constructor(sId?: string, mSettings?: sap.uxap.ObjectPageSectionMetadata);
+		/**
+		 * Constructor for a new ObjectPageSection.
+		 * 
+		 * 
+		 * Accepts an object literal <code>mSettings</code> that defines initial
+		 * property values, aggregated and associated objects as well as event handlers.
+		 * See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object.
+		 * @note Any overloads to support not documented metadata
+		 * @param sId id for the new control, generated automatically if no id is given
+		 * @param mSettings initial settings for the new control
+		 */
+		constructor(sId?: string, mSettings?: any);
 		/**
 		 * Adds some subSection to the aggregation <code>subSections</code>.
 		 * @param oSubSection the subSection to add; if empty, nothing is inserted
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		addSubSection(oSubSection:ObjectPageSubSection): ObjectPageSection;
+		addSubSection(oSubSection: ObjectPageSubSection): ObjectPageSection;
 		/**
 		 * Destroys all the subSections in the aggregation <code>subSections</code>.
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
 		destroySubSections(): ObjectPageSection;
-		/**
-		 * Creates a new subclass of class sap.uxap.ObjectPageSection with name <code>sClassName</code>
-		 * and enriches it with the information contained in <code>oClassInfo</code>.
-		 * 
-		 * <code>oClassInfo</code> might contain the same kind of information as described in {@link sap.uxap.ObjectPageSectionBase.extend}.
-		 * @param sClassName Name of the class being created
-		 * @param oClassInfo Object literal with information about the class
-		 * @param FNMetaImpl Constructor function for the metadata object; if not given, it defaults to <code>sap.ui.core.ElementMetadata</code>
-		 * @return Created class / constructor function
-		 */
-		// extend(sClassName:string, oClassInfo?:any, FNMetaImpl?:any): any;
-		/**
-		 * Returns a metadata object for class sap.uxap.ObjectPageSection.
-		 * @return Metadata object describing this class
-		 */
-		// getmetadata(): sap.ui.base.Metadata;
 		/**
 		 * ID of the element which is the current target of the association <code>selectedSubSection</code>, or <code>null</code>.
 		 * @return 
@@ -2253,7 +2215,7 @@ declare namespace sap.uxap {
 		 * @param oSubSection The subSection whose index is looked for
 		 * @return The index of the provided control in the aggregation if found, or -1 otherwise
 		 */
-		indexOfSubSection(oSubSection:ObjectPageSubSection): number;
+		indexOfSubSection(oSubSection: ObjectPageSubSection): number;
 		/**
 		 * Inserts a subSection into the aggregation <code>subSections</code>.
 		 * @param oSubSection the subSection to insert; if empty, nothing is inserted
@@ -2263,7 +2225,7 @@ declare namespace sap.uxap {
 		 *              the last position
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		insertSubSection(oSubSection:ObjectPageSubSection, iIndex:number): ObjectPageSection;
+		insertSubSection(oSubSection: ObjectPageSubSection, iIndex: number): ObjectPageSection;
 		/**
 		 * Removes all the controls from the aggregation <code>subSections</code>.
 		 * 
@@ -2276,13 +2238,13 @@ declare namespace sap.uxap {
 		 * @param vSubSection The subSection to remove or its index or id
 		 * @return The removed subSection or <code>null</code>
 		 */
-		removeSubSection(vSubSection:number|string|ObjectPageSubSection): ObjectPageSubSection;
+		removeSubSection(vSubSection: number|string|ObjectPageSubSection): ObjectPageSubSection;
 		/**
 		 * Sets the associated <code>selectedSubSection</code>.
 		 * @param oSelectedSubSection ID of an element which becomes the new target of this selectedSubSection association; alternatively, an element instance may be given
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setSelectedSubSection(oSelectedSubSection:sap.ui.core.ID|ObjectPageSubSection): ObjectPageSection;
+		setSelectedSubSection(oSelectedSubSection: sap.ui.core.ID|ObjectPageSubSection): ObjectPageSection;
 		/**
 		 * Sets a new value for property <code>showTitle</code>.
 		 * 
@@ -2294,7 +2256,7 @@ declare namespace sap.uxap {
 		 * @param bShowTitle New value for property <code>showTitle</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setShowTitle(bShowTitle:boolean): ObjectPageSection;
+		setShowTitle(bShowTitle: boolean): ObjectPageSection;
 		/**
 		 * Sets a new value for property <code>titleUppercase</code>.
 		 * 
@@ -2306,10 +2268,10 @@ declare namespace sap.uxap {
 		 * @param bTitleUppercase New value for property <code>titleUppercase</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setTitleUppercase(bTitleUppercase:boolean): ObjectPageSection;
+		setTitleUppercase(bTitleUppercase: boolean): ObjectPageSection;
 	}
 
-	class ObjectPageSectionBase extends sap.ui.core.Control{
+	class ObjectPageSectionBase extends sap.ui.core.Control {
 		/**
 		 * Constructor for a new ObjectPageSectionBase.
 		 * 
@@ -2320,7 +2282,19 @@ declare namespace sap.uxap {
 		 * @param sId id for the new control, generated automatically if no id is given
 		 * @param mSettings initial settings for the new control
 		 */
-		constructor(sId?:string, mSettings?:any);
+		constructor(sId?: string, mSettings?: sap.uxap.ObjectPageSectionBaseMetadata);
+		/**
+		 * Constructor for a new ObjectPageSectionBase.
+		 * 
+		 * 
+		 * Accepts an object literal <code>mSettings</code> that defines initial
+		 * property values, aggregated and associated objects as well as event handlers.
+		 * See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object.
+		 * @note Any overloads to support not documented metadata
+		 * @param sId id for the new control, generated automatically if no id is given
+		 * @param mSettings initial settings for the new control
+		 */
+		constructor(sId?: string, mSettings?: any);
 		/**
 		 * Explicitly ask to connect to the UI5 model tree
 		 */
@@ -2330,17 +2304,6 @@ declare namespace sap.uxap {
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
 		destroyCustomAnchorBarButton(): ObjectPageSectionBase;
-		/**
-		 * Creates a new subclass of class sap.uxap.ObjectPageSectionBase with name <code>sClassName</code>
-		 * and enriches it with the information contained in <code>oClassInfo</code>.
-		 * 
-		 * <code>oClassInfo</code> might contain the same kind of information as described in {@link sap.ui.core.Control.extend}.
-		 * @param sClassName Name of the class being created
-		 * @param oClassInfo Object literal with information about the class
-		 * @param FNMetaImpl Constructor function for the metadata object; if not given, it defaults to <code>sap.ui.core.ElementMetadata</code>
-		 * @return Created class / constructor function
-		 */
-		// extend(sClassName:string, oClassInfo?:any, FNMetaImpl?:any): any;
 		/**
 		 * Gets content of aggregation <code>customAnchorBarButton</code>.
 		 * 
@@ -2360,11 +2323,6 @@ declare namespace sap.uxap {
 		 * @return Value of property <code>importance</code>
 		 */
 		getImportance(): Importance;
-		/**
-		 * Returns a metadata object for class sap.uxap.ObjectPageSectionBase.
-		 * @return Metadata object describing this class
-		 */
-		// getmetadata(): sap.ui.base.Metadata;
 		/**
 		 * Gets current value of property <code>title</code>.
 		 * 
@@ -2386,7 +2344,7 @@ declare namespace sap.uxap {
 		 * @param oCustomAnchorBarButton The customAnchorBarButton to set
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setCustomAnchorBarButton(oCustomAnchorBarButton:sap.m.Button): ObjectPageSectionBase;
+		setCustomAnchorBarButton(oCustomAnchorBarButton: sap.m.Button): ObjectPageSectionBase;
 		/**
 		 * Sets a new value for property <code>importance</code>.
 		 * 
@@ -2398,7 +2356,7 @@ declare namespace sap.uxap {
 		 * @param sImportance New value for property <code>importance</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setImportance(sImportance:Importance): ObjectPageSectionBase;
+		setImportance(sImportance: Importance): ObjectPageSectionBase;
 		/**
 		 * Sets a new value for property <code>title</code>.
 		 * 
@@ -2408,7 +2366,7 @@ declare namespace sap.uxap {
 		 * @param sTitle New value for property <code>title</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setTitle(sTitle:string): ObjectPageSectionBase;
+		setTitle(sTitle: string): ObjectPageSectionBase;
 		/**
 		 * Sets a new value for property <code>visible</code>.
 		 * 
@@ -2420,10 +2378,49 @@ declare namespace sap.uxap {
 		 * @param bVisible New value for property <code>visible</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setVisible(bVisible:boolean): ObjectPageSectionBase;
+		setVisible(bVisible: boolean): ObjectPageSectionBase;
+		/**
+		 * Sets a new value for property <code>visible</code>.
+		 * 
+		 * Whether the control should be visible on the screen. If set to false, a placeholder is rendered instead of the real control
+		 * 
+		 * When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.
+		 * 
+		 * Default value is <code>true</code>.
+		 * @note Overload from base type sap.ui.core.Control
+		 * @param bVisible New value for property <code>visible</code>
+		 * @return Reference to <code>this</code> in order to allow method chaining
+		 */
+		setVisible(bVisible: boolean): sap.ui.core.Control;
+		/**
+		 * Sets a new value for property <code>visible</code>.
+		 * 
+		 * Whether the control should be visible on the screen. If set to false, a placeholder is rendered instead of the real control
+		 * 
+		 * When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.
+		 * 
+		 * Default value is <code>true</code>.
+		 * @note Overload from base type sap.ui.core.Control
+		 * @param bVisible New value for property <code>visible</code>
+		 * @return Reference to <code>this</code> in order to allow method chaining
+		 */
+		setVisible(bVisible: boolean): sap.ui.core.Control;
+		/**
+		 * Sets a new value for property <code>visible</code>.
+		 * 
+		 * Whether the control should be visible on the screen. If set to false, a placeholder is rendered instead of the real control
+		 * 
+		 * When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.
+		 * 
+		 * Default value is <code>true</code>.
+		 * @note Overload from base type sap.ui.core.Control
+		 * @param bVisible New value for property <code>visible</code>
+		 * @return Reference to <code>this</code> in order to allow method chaining
+		 */
+		setVisible(bVisible: boolean): sap.ui.core.Control;
 	}
 
-	class ObjectPageSubSection extends ObjectPageSectionBase{
+	class ObjectPageSubSection extends ObjectPageSectionBase {
 		/**
 		 * Constructor for a new ObjectPageSubSection.
 		 * 
@@ -2434,25 +2431,37 @@ declare namespace sap.uxap {
 		 * @param sId id for the new control, generated automatically if no id is given
 		 * @param mSettings initial settings for the new control
 		 */
-		constructor(sId?:string, mSettings?:any);
+		constructor(sId?: string, mSettings?: sap.uxap.ObjectPageSubSectionMetadata);
+		/**
+		 * Constructor for a new ObjectPageSubSection.
+		 * 
+		 * 
+		 * Accepts an object literal <code>mSettings</code> that defines initial
+		 * property values, aggregated and associated objects as well as event handlers.
+		 * See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object.
+		 * @note Any overloads to support not documented metadata
+		 * @param sId id for the new control, generated automatically if no id is given
+		 * @param mSettings initial settings for the new control
+		 */
+		constructor(sId?: string, mSettings?: any);
 		/**
 		 * Adds some action to the aggregation <code>actions</code>.
 		 * @param oAction the action to add; if empty, nothing is inserted
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		addAction(oAction:sap.ui.core.Control): ObjectPageSubSection;
+		addAction(oAction: sap.ui.core.Control): ObjectPageSubSection;
 		/**
 		 * Adds some block to the aggregation <code>blocks</code>.
 		 * @param oBlock the block to add; if empty, nothing is inserted
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		addBlock(oBlock:sap.ui.core.Control): ObjectPageSubSection;
+		addBlock(oBlock: sap.ui.core.Control): ObjectPageSubSection;
 		/**
 		 * Adds some moreBlock to the aggregation <code>moreBlocks</code>.
 		 * @param oMoreBlock the moreBlock to add; if empty, nothing is inserted
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		addMoreBlock(oMoreBlock:sap.ui.core.Control): ObjectPageSubSection;
+		addMoreBlock(oMoreBlock: sap.ui.core.Control): ObjectPageSubSection;
 		/**
 		 * Destroys all the actions in the aggregation <code>actions</code>.
 		 * @return Reference to <code>this</code> in order to allow method chaining
@@ -2469,17 +2478,6 @@ declare namespace sap.uxap {
 		 */
 		destroyMoreBlocks(): ObjectPageSubSection;
 		/**
-		 * Creates a new subclass of class sap.uxap.ObjectPageSubSection with name <code>sClassName</code>
-		 * and enriches it with the information contained in <code>oClassInfo</code>.
-		 * 
-		 * <code>oClassInfo</code> might contain the same kind of information as described in {@link sap.uxap.ObjectPageSectionBase.extend}.
-		 * @param sClassName Name of the class being created
-		 * @param oClassInfo Object literal with information about the class
-		 * @param FNMetaImpl Constructor function for the metadata object; if not given, it defaults to <code>sap.ui.core.ElementMetadata</code>
-		 * @return Created class / constructor function
-		 */
-		// extend(sClassName:string, oClassInfo?:any, FNMetaImpl?:any): any;
-		/**
 		 * Gets content of aggregation <code>actions</code>.
 		 * 
 		 * Actions available for this Subsection
@@ -2493,11 +2491,6 @@ declare namespace sap.uxap {
 		 * @return 
 		 */
 		getBlocks(): sap.ui.core.Control[];
-		/**
-		 * Returns a metadata object for class sap.uxap.ObjectPageSubSection.
-		 * @return Metadata object describing this class
-		 */
-		// getmetadata(): sap.ui.base.Metadata;
 		/**
 		 * Gets current value of property <code>mode</code>.
 		 * 
@@ -2529,21 +2522,21 @@ declare namespace sap.uxap {
 		 * @param oAction The action whose index is looked for
 		 * @return The index of the provided control in the aggregation if found, or -1 otherwise
 		 */
-		indexOfAction(oAction:sap.ui.core.Control): number;
+		indexOfAction(oAction: sap.ui.core.Control): number;
 		/**
 		 * Checks for the provided <code>sap.ui.core.Control</code> in the aggregation <code>blocks</code>.
 		 * and returns its index if found or -1 otherwise.
 		 * @param oBlock The block whose index is looked for
 		 * @return The index of the provided control in the aggregation if found, or -1 otherwise
 		 */
-		indexOfBlock(oBlock:sap.ui.core.Control): number;
+		indexOfBlock(oBlock: sap.ui.core.Control): number;
 		/**
 		 * Checks for the provided <code>sap.ui.core.Control</code> in the aggregation <code>moreBlocks</code>.
 		 * and returns its index if found or -1 otherwise.
 		 * @param oMoreBlock The moreBlock whose index is looked for
 		 * @return The index of the provided control in the aggregation if found, or -1 otherwise
 		 */
-		indexOfMoreBlock(oMoreBlock:sap.ui.core.Control): number;
+		indexOfMoreBlock(oMoreBlock: sap.ui.core.Control): number;
 		/**
 		 * Inserts a action into the aggregation <code>actions</code>.
 		 * @param oAction the action to insert; if empty, nothing is inserted
@@ -2553,7 +2546,7 @@ declare namespace sap.uxap {
 		 *              the last position
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		insertAction(oAction:sap.ui.core.Control, iIndex:number): ObjectPageSubSection;
+		insertAction(oAction: sap.ui.core.Control, iIndex: number): ObjectPageSubSection;
 		/**
 		 * Inserts a block into the aggregation <code>blocks</code>.
 		 * @param oBlock the block to insert; if empty, nothing is inserted
@@ -2563,7 +2556,7 @@ declare namespace sap.uxap {
 		 *              the last position
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		insertBlock(oBlock:sap.ui.core.Control, iIndex:number): ObjectPageSubSection;
+		insertBlock(oBlock: sap.ui.core.Control, iIndex: number): ObjectPageSubSection;
 		/**
 		 * Inserts a moreBlock into the aggregation <code>moreBlocks</code>.
 		 * @param oMoreBlock the moreBlock to insert; if empty, nothing is inserted
@@ -2573,13 +2566,13 @@ declare namespace sap.uxap {
 		 *              the last position
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		insertMoreBlock(oMoreBlock:sap.ui.core.Control, iIndex:number): ObjectPageSubSection;
+		insertMoreBlock(oMoreBlock: sap.ui.core.Control, iIndex: number): ObjectPageSubSection;
 		/**
 		 * Removes a action from the aggregation <code>actions</code>.
 		 * @param vAction The action to remove or its index or id
 		 * @return The removed action or <code>null</code>
 		 */
-		removeAction(vAction:number|string|sap.ui.core.Control): sap.ui.core.Control;
+		removeAction(vAction: number|string|sap.ui.core.Control): sap.ui.core.Control;
 		/**
 		 * Removes all the controls from the aggregation <code>actions</code>.
 		 * 
@@ -2606,13 +2599,13 @@ declare namespace sap.uxap {
 		 * @param vBlock The block to remove or its index or id
 		 * @return The removed block or <code>null</code>
 		 */
-		removeBlock(vBlock:number|string|sap.ui.core.Control): sap.ui.core.Control;
+		removeBlock(vBlock: number|string|sap.ui.core.Control): sap.ui.core.Control;
 		/**
 		 * Removes a moreBlock from the aggregation <code>moreBlocks</code>.
 		 * @param vMoreBlock The moreBlock to remove or its index or id
 		 * @return The removed moreBlock or <code>null</code>
 		 */
-		removeMoreBlock(vMoreBlock:number|string|sap.ui.core.Control): sap.ui.core.Control;
+		removeMoreBlock(vMoreBlock: number|string|sap.ui.core.Control): sap.ui.core.Control;
 		/**
 		 * Sets a new value for property <code>mode</code>.
 		 * 
@@ -2624,7 +2617,7 @@ declare namespace sap.uxap {
 		 * @param sMode New value for property <code>mode</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setMode(sMode:ObjectPageSubSectionMode): ObjectPageSubSection;
+		setMode(sMode: ObjectPageSubSectionMode): ObjectPageSubSection;
 		/**
 		 * Sets a new value for property <code>titleUppercase</code>.
 		 * 
@@ -2636,7 +2629,7 @@ declare namespace sap.uxap {
 		 * @param bTitleUppercase New value for property <code>titleUppercase</code>
 		 * @return Reference to <code>this</code> in order to allow method chaining
 		 */
-		setTitleUppercase(bTitleUppercase:boolean): ObjectPageSubSection;
+		setTitleUppercase(bTitleUppercase: boolean): ObjectPageSubSection;
 	}
 
 	class ObjectPageSubSectionLayout {
@@ -2659,6 +2652,357 @@ declare namespace sap.uxap {
 		 * Expanded mode of displaying the ObjectPageLayout.
 		 */
 		static Expanded: string;
+	}
+
+	interface AnchorBarMetadata extends sap.m.ToolbarMetadata {
+		/**
+		 * Determines whether to show a Popover with Subsection links when clicking on Section links in the Anchor bar.
+		 * @default true
+		 */
+		showPopover?: boolean;
+		/**
+		 * Determines whether the Anchor bar items are displayed in upper case.
+		 * @default false
+		 */
+		upperCase?: boolean;
+	}
+
+	interface BlockBaseMetadata extends sap.ui.core.ControlMetadata {
+		/**
+		 * Determines the mode of the block.
+		 * When block is used inside ObjectPage this mode is inherited my the SubSection.
+		 * The mode of the block is changed when SubSection mode changes.
+		 */
+		mode?: string;
+		/**
+		 * Determines the visibility of the block.
+		 * @default true
+		 */
+		visible?: boolean;
+		/**
+		 * Determines on how columns the layout will be rendered.
+		 * Allowed values are integers from 1 to 4 and "auto".
+		 * @default auto
+		 */
+		columnLayout?: sap.uxap.BlockBaseColumnLayout;
+		/**
+		 * Determines if the block should automatically adjust its inner forms.
+		 * Allowed values are "BlockColumns" and "OneColumn" and "None".
+		 * If the value is "BlockColumns", then the inner form will have as many columns as the colspan of its parent block.
+		 * If the value is "OneColumn", the inner form will have exactly one column, regardless the colspan of its parent block.
+		 * If the value is "None", no automatic adjustment of inner forms will be made and the form will keep its original column count.
+		 * @default BlockColumns
+		 */
+		formAdjustment?: sap.uxap.BlockBaseFormAdjustment;
+		/**
+		 * Determines whether the show more button should be shown.
+		 * @default false
+		 */
+		showSubSectionMore?: boolean;
+	}
+
+	interface BreadCrumbsMetadata extends sap.ui.core.ControlMetadata {
+		/**
+		 * Sets the visibility of the current/last element in the BreadCrumbs path.
+		 * @default true
+		 */
+		showCurrentLocation?: boolean;
+	}
+
+	interface HierarchicalSelectMetadata extends sap.m.SelectMetadata {
+		/**
+		 * Determines whether the HierarchicalSelect items are displayed in upper case.
+		 * @default false
+		 */
+		upperCase?: boolean;
+	}
+
+	interface ModelMappingMetadata {
+		/**
+		 * Determines the the external model name.
+		 */
+		externalModelName?: string;
+		/**
+		 * Determines the the internal model name.
+		 * @default Model
+		 */
+		internalModelName?: string;
+		/**
+		 * Determines the the external path.
+		 */
+		externalPath?: string;
+	}
+
+	interface ObjectPageHeaderMetadata extends sap.ui.core.ControlMetadata {
+		/**
+		 * The URL of the image, representing the business object
+		 */
+		objectImageURI?: string;
+		/**
+		 * The text to be used for the Alt and Tooltip attribute of the image, supplied via the objectImageURI property
+		 * @default 
+		 */
+		objectImageAlt?: string;
+		/**
+		 * The value of densityAware for the image, supplied via the objectImageURI property.
+		 * See sap.m.Image for more details on densityAware.
+		 * @default false
+		 */
+		objectImageDensityAware?: boolean;
+		/**
+		 * The title of the object
+		 */
+		objectTitle?: string;
+		/**
+		 * The description of the object
+		 */
+		objectSubtitle?: string;
+		/**
+		 * Determines whether the picture should be displayed in a square or with a circle-shaped mask.
+		 * @default Square
+		 */
+		objectImageShape?: sap.uxap.ObjectPageHeaderPictureShape;
+		/**
+		 * Determines whether the icon should always be visible or visible only when the header is snapped.
+		 * @default false
+		 */
+		isObjectIconAlwaysVisible?: boolean;
+		/**
+		 * Determines whether the title should always be visible or visible only when the header is snapped.
+		 * @default true
+		 */
+		isObjectTitleAlwaysVisible?: boolean;
+		/**
+		 * Determines whether the subtitle should always be visible or visible only when the header is snapped.
+		 * @default true
+		 */
+		isObjectSubtitleAlwaysVisible?: boolean;
+		/**
+		 * Determines whether the action buttons should always be visible or visible only when the header is snapped.
+		 * @default true
+		 */
+		isActionAreaAlwaysVisible?: boolean;
+		/**
+		 * When set to true, the selector arrow icon/image is shown and can be pressed.
+		 * @default false
+		 */
+		showTitleSelector?: boolean;
+		/**
+		 * Set the favorite state to true or false. The showMarkers property must be true for this property to take effect.
+		 * @default false
+		 */
+		markFavorite?: boolean;
+		/**
+		 * Set the flagged state to true or false. The showMarkers property must be true for this property to take effect.
+		 * @default false
+		 */
+		markFlagged?: boolean;
+		/**
+		 * Indicates if object page header title supports showing markers such as flagged and favorite.
+		 * @default false
+		 */
+		showMarkers?: boolean;
+		/**
+		 * Set the locked state of the objectPageHeader.
+		 * @default false
+		 */
+		markLocked?: boolean;
+		/**
+		 * Enables support of a placeholder image in case no image is specified or the URL of the provided image is invalid.
+		 * @default false
+		 */
+		showPlaceholder?: boolean;
+		/**
+		 * Marks that there are unsaved changes in the objectPageHeader.
+		 * The markChanges state cannot be used together with the markLocked state.
+		 * If both are set to true, only the locked state will be displayed.
+		 * @default false
+		 */
+		markChanges?: boolean;
+	}
+
+	interface ObjectPageHeaderActionButtonMetadata extends sap.m.ButtonMetadata {
+		/**
+		 * Hide the button text when rendered into the headerTitle part of the ObjectPageLayout.
+		 * This is useful if you want to display icons only in the headerTitle part but still want to display text + icon in the actionSheet that appears when not enough space is available on the screen for displaying all actions.
+		 * @default true
+		 */
+		hideText?: boolean;
+		/**
+		 * Hide the button icon when rendered into the headerTitle part of the ObjectPageLayout.
+		 * This is useful if you want to display texts only in the headerTitle part but still want to display text + icon in the actionSheet that appears when not enough space is available on the screen for displaying all actions.
+		 * @default false
+		 */
+		hideIcon?: boolean;
+		/**
+		 * Determines the order in which the button overflows.
+		 * @default library.Importance.High
+		 */
+		importance?: sap.uxap.Importance;
+	}
+
+	interface ObjectPageHeaderContentMetadata extends sap.ui.core.ControlMetadata {
+	}
+
+	interface ObjectPageHeaderLayoutDataMetadata {
+		/**
+		 * If this property is set the control will be visible (or not) in a small sized layout.
+		 * @default true
+		 */
+		visibleS?: boolean;
+		/**
+		 * If this property is set the control will be visible (or not) in a medium sized layout.
+		 * @default true
+		 */
+		visibleM?: boolean;
+		/**
+		 * If this property is set the control will be visible (or not) in a large sized layout.
+		 * @default true
+		 */
+		visibleL?: boolean;
+		/**
+		 * If this property is set the control will display a separator before it.
+		 * @default false
+		 */
+		showSeparatorBefore?: boolean;
+		/**
+		 * If this property is set the control will display a separator after it.
+		 * @default false
+		 */
+		showSeparatorAfter?: boolean;
+		/**
+		 * If this property is set the control will take the provided size.
+		 * @default auto
+		 */
+		width?: sap.ui.core.CSSSize;
+	}
+
+	interface ObjectPageLayoutMetadata extends sap.ui.core.ControlMetadata {
+		/**
+		 * Determines whether the Navigation bar (Anchor bar) is displayed.
+		 * @default true
+		 */
+		showAnchorBar?: boolean;
+		/**
+		 * Determines whether to show a Popover with Subsection links when clicking on Section links in the Anchor bar.
+		 * @default true
+		 */
+		showAnchorBarPopover?: boolean;
+		/**
+		 * Determines whether the Anchor bar items are displayed in upper case.
+		 * @default true
+		 */
+		upperCaseAnchorBar?: boolean;
+		/**
+		 * Determines the height of the ObjectPage.
+		 * @default 100%
+		 */
+		height?: sap.ui.core.CSSSize;
+		/**
+		 * Enable lazy loading for the Object page Subsections.
+		 * @default false
+		 */
+		enableLazyLoading?: boolean;
+		/**
+		 * Determines whether Subsection titles are displayed on top or to the left of the Subsection content.
+		 * @default TitleOnTop
+		 */
+		subSectionLayout?: sap.uxap.ObjectPageSubSectionLayout;
+		/**
+		 * Use sap.m.IconTabBar instead of the default Anchor bar
+		 * @default false
+		 */
+		useIconTabBar?: boolean;
+		/**
+		 * Determines the visibility of the Header content (headerContent aggregation).
+		 * @default true
+		 */
+		showHeaderContent?: boolean;
+		/**
+		 * Determines whether the to use two column layout for the L screen size.
+		 * @default false
+		 */
+		useTwoColumnsForLargeScreen?: boolean;
+		/**
+		 * Determines whether the title, image, markers and selectTitleArrow are shown in the Header content area.
+		 * @default false
+		 */
+		showTitleInHeaderContent?: boolean;
+		/**
+		 * Determines whether sections and subsections with importance Low and Medium are hidden even on large screens.
+		 * @default false
+		 */
+		showOnlyHighImportance?: boolean;
+		/**
+		 * Determines whether the page is a child page and renders it with a different design.
+		 * Child pages have an additional (darker/lighter) stripe on the left side of their header content area.
+		 * @default false
+		 */
+		isChildPage?: boolean;
+		/**
+		 * Determines whether Header Content will always be expanded on desktop.
+		 * @default false
+		 */
+		alwaysShowContentHeader?: boolean;
+		/**
+		 * Determines whether an Edit button will be shown in Header Content.
+		 * @default false
+		 */
+		showEditHeaderButton?: boolean;
+		/**
+		 * Specifies whether the object page enables flexibility features, such as hiding and adding sections.<br>
+		 * For more information about SAPUI5 flexibility, refer to the Developer Guide.
+		 * @default false
+		 */
+		flexEnabled?: boolean;
+		/**
+		 * Determines whether the footer is visible.
+		 * @default false
+		 */
+		showFooter?: boolean;
+	}
+
+	interface ObjectPageSectionMetadata extends sap.uxap.ObjectPageSectionBaseMetadata {
+		/**
+		 * Determines whether to display the Section title or not.
+		 * @default true
+		 */
+		showTitle?: boolean;
+		/**
+		 * Determines whether the Section title is displayed in upper case.
+		 * @default true
+		 */
+		titleUppercase?: boolean;
+	}
+
+	interface ObjectPageSectionBaseMetadata extends sap.ui.core.ControlMetadata {
+		/**
+		 * Section Title
+		 */
+		title?: string;
+		/**
+		 * Invisible ObjectPageSectionBase are not rendered
+		 * @default true
+		 */
+		visible?: boolean;
+		/**
+		 * Determines whether the section will be hidden on low resolutions.
+		 * @default library.Importance.High
+		 */
+		importance?: sap.uxap.Importance;
+	}
+
+	interface ObjectPageSubSectionMetadata extends sap.uxap.ObjectPageSectionBaseMetadata {
+		/**
+		 * A mode property that will be passed to the controls in the blocks and moreBlocks aggregations. Only relevant if these aggregations use Object page blocks.
+		 * @default Collapsed
+		 */
+		mode?: sap.uxap.ObjectPageSubSectionMode;
+		/**
+		 * Determines whether the Subsection title is displayed in upper case.
+		 * @default false
+		 */
+		titleUppercase?: boolean;
 	}
 	/**
 	 * Used by the BlockBase control to define how many columns should it be assigned by the objectPageSubSection.
